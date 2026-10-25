@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VellFire.Ai Setup Guide</title><link rel="icon" href="static/icon.svg">
+<style>:root{--bg:#0b0d12;--panel:#141821;--line:#2a313c;--text:#e6edf3;--muted:#8b949e;--orange:#ff8a00}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:13.5px/1.5 Inter,"Segoe UI",Roboto,Arial,sans-serif}
+.page{max-width:900px;margin:0 auto;padding:22px 26px 40px}.logo{width:330px;max-width:100%;display:block}
+h1{font-size:15px;color:var(--muted);font-weight:600;letter-spacing:.2em;margin:4px 0 12px}
+h2{font-size:15px;margin:16px 0 4px;color:var(--orange)}p,li{margin:3px 0}ol,ul{margin:4px 0;padding-left:20px}
+code{font-family:Consolas,monospace;background:#0d1117;border:1px solid var(--line);border-radius:3px;padding:0 4px;font-size:12.5px}
+table{width:100%;border-collapse:collapse;margin:4px 0}td,th{border:1px solid var(--line);padding:6px 8px;vertical-align:top;text-align:left;width:50%}
+th{background:var(--panel)}.small{font-size:12px;color:var(--muted)}
+.dis{border:1px solid #ff8a0088;background:#ff8a0012;border-radius:8px;padding:9px 12px;font-weight:600;margin:14px 0 6px}
+@media print{body{background:#fff;color:#111;font-size:11px}.page{padding:0}h2{color:#c2410c}code{background:#f3f4f6;border-color:#ddd}
+td,th{border-color:#ccc}th{background:#f3f4f6}.dis{background:#fff7ed;border-color:#fdba74}.small{color:#555}.logo{filter:none}}</style></head>
+<body><div class="page">
+<img class="logo" src="static/logo.svg" alt="VellFire.Ai">
+<h1>TRADE YOUR OWN RULES · SETUP GUIDE v0.2</h1>
+<h2>What it is</h2>
+<p><b>VellFire.Ai is the trading platform you build yourself: write your rules in plain English, test any idea honestly in minutes,
+and trade with an AI coach that holds you to them. Claude customises every page for you.</b></p>
+<ul><li><b>Build it your way</b>: your layout, panels, hotkeys, scans and alerts. It starts blank.</li>
+<li><b>Test before you trust</b>: an idea in words or a formula becomes an honest backtest, after costs, against random entries, both halves of the history, with a plain PASS / FAIL.</li>
+<li><b>An AI coach that knows your rules</b>: your rulebook, a view on every stock, a daily review, lessons it keeps, and a score of its own calls.</li>
+<li><b>Practise like it's live</b>: Replay with your own Montage and hotkeys, and paper trading with hard risk limits as the safety net under everything.</li></ul>
+<p>One low-cost platform instead of a stack of expensive ones: scanning, backtesting, order flow, replay and coaching in one place, using your own broker,
+data and AI at cost, with no platform mark-up on data.</p>
+<p>This is <b>v0.2, a prototype for friends to try</b>. It trades on <b>paper only</b>: no real orders are ever sent to a broker.</p>
+<h2>Get started (Windows, 2 minutes)</h2>
+<ol>
+<li><b>Download</b> <code>VellFireAi_Setup.exe</code>.</li>
+<li><b>Double-click it.</b> Tick "I accept" and click <b>Install</b>, then <b>Open VellFire.Ai</b>. No Python, no admin rights, nothing else to install.
+<br><span class="small">Windows may say "Windows protected your PC" because this early version isn't signed yet: click <b>More info</b>, then <b>Run anyway</b>.
+Your browser may also ask whether to keep the download: choose <b>Keep</b>.</span></li>
+<li><b>Follow the screens</b>: accept the disclaimer and licence (or paste your licence key), set your risk ($ per trade, $ per day),
+connect your broker (VellFire finds IBKR TWS / IB Gateway on your computer by itself) or click <b>explore with demo data</b>, then add optional keys.</li></ol>
+<p class="small">Demo data is simulated prices for made-up stocks (DEMO1 to DEMO5), so you can try everything before connecting anything. A striped DEMO banner
+shows while it's on; click <b>Connect my broker</b> on it any time. Each trading day starts with a <b>Today's risk</b> check: click <b>Start trading with these limits</b>.</p>
+<p class="small">To connect IBKR: open TWS or IB Gateway and log in to your <b>paper</b> account. In TWS: File &gt; Global Configuration &gt; API &gt; Settings:
+tick "Enable ActiveX and Socket Clients" (port 7497). VellFire only reads prices from IBKR; your trades are VellFire's own paper fills.</p>
+<p class="small">Optional keys (stored only on your computer): <b>Claude</b> (console.anthropic.com) for every Claude feature (free in VellFire; you pay Anthropic for what you use);
+<b>Massive</b> (massive.com, formerly Polygon.io) for more price history; <b>Finnhub</b> (finnhub.io, free) for earnings dates and news.
+Uninstall any time from Windows Settings &gt; Apps; your own data stays in <code>%LOCALAPPDATA%\VellFireAi</code>.</p>
+<h2>On a Mac</h2>
+<ol><li>Open <b>VellFireAi_mac_….dmg</b> and drag <b>VellFire.app</b> onto <b>Applications</b>. (Apple-silicon Macs: the <code>arm64</code> file; older Intel Macs: <code>x86_64</code>.)</li>
+<li>The first time: the app isn't signed with an Apple developer ID yet, so <b>right-click VellFire.app › Open › Open</b>. (Or open it once, then <b>System Settings › Privacy &amp; Security › Open Anyway</b>.) After that it opens normally.</li>
+<li>IBKR: install <b>TWS</b> or <b>IB Gateway</b> for Mac, log in to your paper account, and turn on the API (port <b>7497</b> for TWS paper, 4002 for Gateway paper). VellFire finds it.</li>
+<li>Hotkeys use <b>⌘</b> where Windows uses Ctrl (⌘K opens the Claude bar). Your data lives in <code>~/Library/Application Support/VellFireAi</code>.</li></ol>
+<h2>No-install option: the portable VellFire</h2>
+<p><b>VellFireAi_Portable_v0.3.9.exe</b> is the whole app in one file: nothing is installed. Put it in any folder (a USB stick works) and double-click it; it unpacks for a few seconds behind a splash screen, then opens. Your settings and journal live in a <b>"VellFire Data"</b> folder next to the file (or in %LOCALAPPDATA%\VellFireAi if that folder can't be written to; Setup shows which). To remove it, delete the file and that folder. Windows may warn about an unknown app the first time (it isn't code-signed yet): if Smart App Control blocks it, use the installer instead.</p>
+<h2>3 · Make it yours</h2>
+<ul>
+<li><b>Customise</b> (build it your way): which tabs show, which trade-screen panels show (drag to re-order with <b>▦ Layout</b> on the Trade screen), your hotkeys, watchlist and screener list.</li>
+<li><b>My Rules</b>: your rulebook in plain English (setups, risk, hours, no-trade rules, exits). The AI coach reads it on every answer, gives a view on the stock you load, reviews your day and keeps the lessons.</li>
+<li><b>Test my idea</b> (test before you trust): type an idea in words or a TC2000-style formula (e.g. <code>C &gt; AVGC50 AND C1 &lt;= AVGC50</code>). You confirm the rules, then it backtests your watchlist on daily bars with costs, against random entries, first half vs second half. PASS only if it averages +0.15R or better after costs, both halves are positive and it beats random.</li>
+<li><b>My scans / My alerts</b>: save formulas, run them on your watchlist, get alerts when price crosses a level or a scan turns true.</li>
+<li><b>Replay</b> (Pro; practise like it's live): step through a past day bar by bar with your own Montage and hotkeys.</li>
+<li><b>Risk limits</b>, the safety net (the cog): risk per trade (default $50) and max loss a day (default $150), max trades, tilt cool-down. All risk settings (including your trading hours) are locked during US market hours: no raising and no lowering. Outside market hours you change them with the "I have read and agree" box ticked, and they apply at once. In market hours the one thing you can do is "Stop trading for today" (entries locked until the next session; exits always work).</li></ul>
+<p><b>Pro: let Claude build it for you.</b> In the Coach, ask in plain English ("build me a screen for stocks up 5% on twice their volume", "add a market rule: QQQ above its 20-day", "lower my max trades to 3"). Claude proposes each change as a card; nothing changes until you click <b>Add</b>, and "Undo last change" puts it back. It can never place orders, raise your risk or widen your trading hours.</p>
+<h2>How VellFire talks about stocks</h2>
+<p>VellFire never gives buy or sell signals. Claude's View, the stock checks and the market checks are a <b>checklist of your own rules</b>: "✓ Fits your rules", "◐ Partly fits" or "✗ Doesn't fit your rules", each rule shown as met, not met or unknown with the numbers behind it, plus plain facts (how far price is from your level, what your stop and risk in $ would be, how much room there is). Your decision. Not advice.</p>
+<h2 id="privacy">Privacy: the developer stores nothing</h2>
+<p><b>Your data stays on your computer. VellFire has no servers and the developer stores nothing: no account, no trades, no keys. Claude, IBKR and data requests go directly from your PC to those services using your own accounts. VellFire only connects to the services you configure.</b></p>
+<p class="small">The only connections VellFire makes are the ones you set up: Anthropic (Claude, with your key), IBKR TWS / Gateway on your own computer, IG's demo server if you choose IG on the Brokers page (demo accounts only, never live), the data providers whose keys you add (Massive, Alpaca, Tiingo, Twelve Data, FRED, Finnhub, and any of your own sources added on the Data feeds page: each key is only sent to the web address you typed for it), SEC EDGAR if you switch it on, public news sites if you switch them on, TradingView and X only inside panels you add, ntfy / your Gmail only if you turn on phone or email alerts, and an update address only if one is set later. There is no VellFire server, no analytics and no tracking. The "☕ Support" button just opens a web page in your browser when you click it.</p>
+<h2>Your own data sources and any feature on any page</h2>
+<p><b>Data feeds › + Add any data source</b> connects any provider with a JSON web API: type its web address with <code>{symbol}</code> <code>{from}</code> <code>{to}</code> <code>{interval}</code> <code>{key}</code>, say how the key is sent, press <b>Test</b> to see the raw reply for SPY, and map the fields (or let Claude map them from a sample). Price-bar sources join your fallback order. Every card also takes a key now, even sources marked "coming later". <b>+ Add</b> (left of the Ask Claude bar, on every page) adds charts, X feeds, TradingView widgets, notes, your watchlist, alerts, or a whole VellFire feature (Trade, Screener, Journal, Replay…) to the page you are on; <b>New blank page…</b> makes your own tab. Or just ask Claude: "add an X feed for @name here".</p>
+<h2>Your data is safe</h2>
+<p>Everything you make in VellFire (rules, journal, screens, charts, settings) lives in your own data folder: <code>%LOCALAPPDATA%\VellFireAi</code> on Windows, <code>~/Library/Application Support/VellFireAi</code> on a Mac. It is never inside the program folder, so installing, updating or removing VellFire never touches it. A backup is made every day and before every update (the last 14 are kept), and in <b>Settings › Your data and backups</b> you can back up now, restore, and have each backup copied to your own OneDrive / Google Drive / Dropbox / iCloud Drive folder. Your API keys are left out of backups unless you switch them in. A restore never loosens your risk limits.</p>
+<h2>Support VellFire</h2>
+<p>VellFire is free. If it helps you, the <b>☕ Support</b> button (top bar, or the Upgrades page) lets you buy the developer a coffee. No pressure: you'll see a small reminder at most once a month.</p>
+<h2>Free and Pro</h2>
+<p id="afterBeta"><b>After the beta:</b> VellFire becomes one monthly subscription for everything, starting with a free trial of everything (no card needed). If you don't subscribe, your data (view, export, back up, delete), your risk controls and closing or flattening positions always stay available. Prices and the trial length are shown on the Upgrades page.</p>
+<p><b>Free during the beta:</b> every feature below, Pro included, is free for everyone right now. Pro features may become paid later; a licence key entered in Setup keeps working when the beta ends.</p>
+
+<table><tr><th>Free</th><th>Pro (60-day licence)</th></tr>
+<tr><td>Charts, Montage, hotkeys · paper trading with the risk lock · the screener, watchlists, scans and alerts · Situational Awareness · the journal · trading-hours windows · <b>Claude customises every page for you</b> (your own Claude key): coach chat, Claude's View, the Ask Claude bar, building screens / alerts / panels for you, the daily AI review · My Rules, workspaces, themes, hotkeys, profiles</td>
+<td>Everything in Free, plus the non-AI power tools: Replay any past day bar by bar with your own Montage and hotkeys (order-book overlay where you have book data) · the Test my idea backtest engine · Edge stats · licensed VellFire data (coming)</td></tr></table>
+<p class="small">A licence runs 60 days. When it ends you drop to Free; your data, charts and paper trading keep working. AI features use your own Claude key.</p>
+<h2>What it costs you</h2>
+<p>VellFire uses your own broker, data and AI at cost: you pay each provider directly, with no VellFire mark-up on data.
+Check each provider's current pricing.</p>
+<ul><li><b>VellFire licence</b>: Free, or Pro for the AI and backtest features.</li>
+<li><b>IBKR market data</b>: whatever market-data subscriptions you choose in your own IBKR account.</li>
+<li><b>Price history</b>: IBKR history works for light use; for more (longer backtests, Replay) a Massive / Polygon plan.</li>
+<li><b>Claude</b>: pay-as-you-go on your own Anthropic key, only for the AI features you use.</li>
+<li><b>Optional</b>: an order-book (depth) add-on from your data provider.</li></ul>
+<p class="small">Cheapest setup: IBKR for live data and history, no Massive key, and add a Claude key to switch on the AI features (free in VellFire; you pay Anthropic for what you use).</p>
+<h2>Good to know</h2>
+<ul><li>Everything is saved in the VellFire folder (<code>data</code> for your work, <code>keys</code> for your keys). Back the folder up; delete it to remove VellFire.</li>
+<li>VellFire can run next to other trading apps: it uses its own port (8810) and its own window.</li>
+<li>Live trading, ThetaData and a VellFire data feed are planned for later versions.</li></ul>
+<h2>Feedback</h2>
+<p>This is an early version: what's confusing, what's missing, what broke? <b>Send feedback to <a href="mailto:brewsterhomeservices@gmail.com">brewsterhomeservices@gmail.com</a></b> (screenshots help).</p>
+<div class="dis">VellFire.Ai is software for education and research. Not financial advice. Trading involves risk of loss. You make your own decisions.</div><p class="small">No claim is made that VellFire.Ai or any idea tested in it makes money. Past results don't predict future results.</p>
+</div></body></html>
