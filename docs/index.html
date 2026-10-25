@@ -1,0 +1,77 @@
+<!doctype html>
+<!-- ===== COMPANY DETAILS: fill these in (empty ones are hidden). COMPANY_NO starting "SC" = registered in Scotland. ===== -->
+<script>
+const COMPANY = {
+  COMPANY_NAME: "Brewster Home Services Ltd",   // from the public Companies House record; pending the owner's confirmation
+  COMPANY_NO: "SC818021",
+  REG_OFFICE: "Carnessie House, Ancrum, Jedburgh, TD8 6XA",
+  CONTACT_EMAIL: "brewsterhomeservices@gmail.com"
+};
+</script>
+<!-- ===== end of company details ===== -->
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VellFire.Ai - Trade your own rules</title>
+<meta name="description" content="VellFire.Ai: a risk-first trading workstation that checks every idea against your own rules. Paper trading, Claude built in, your data stays on your PC.">
+<link rel="icon" href="img/icon.svg">
+<style>
+:root{--bg:#0b0d12;--panel:#12161e;--line:#2a313c;--text:#e6edf3;--muted:#8b949e;--accent:#ff8a00;--green:#3fb950}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){--bg:#f6f7f9;--panel:#fff;--line:#d8dde3;--text:#14181f;--muted:#57606a}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 "Segoe UI",system-ui,-apple-system,Roboto,sans-serif}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+header{display:flex;align-items:center;gap:10px;padding:18px 0}header img{width:34px;height:34px}header b{font-size:20px;letter-spacing:-.3px}header b span{color:var(--accent)}
+header nav{margin-left:auto;display:flex;gap:16px;font-size:14px}header nav a{color:var(--muted);text-decoration:none}
+.hero{padding:40px 0 24px;text-align:center}.hero h1{font-size:clamp(32px,6vw,56px);margin:0 0 10px;letter-spacing:-1px}
+.hero p{color:var(--muted);max-width:680px;margin:0 auto 26px;font-size:18px}
+.dl{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:#111;font-weight:700;font-size:19px;text-decoration:none;padding:14px 28px;border-radius:10px}
+.alt{margin-top:12px;font-size:14px;color:var(--muted)}.alt a{color:var(--text)}
+.note{max-width:640px;margin:18px auto 0;font-size:13px;color:var(--muted);border:1px solid var(--line);border-radius:8px;padding:10px 14px;text-align:left}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:34px 0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px}.card h3{margin:0 0 6px;font-size:16px}.card p{margin:0;color:var(--muted);font-size:14px}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;margin:10px 0 34px}.shots img{width:100%;border-radius:10px;border:1px solid var(--line);display:block}
+footer{border-top:1px solid var(--line);padding:22px 0 40px;color:var(--muted);font-size:13px}footer a{color:var(--muted)}
+</style></head>
+<body>
+<div class="wrap">
+ <header><img src="img/icon.svg" alt=""><b>VellFire<span>.Ai</span></b>
+  <nav><a href="guide.html">Guide</a><a href="https://github.com/Vellfire-ai/vellfire.ai/releases">Releases</a></nav></header>
+
+ <section class="hero">
+  <h1>Trade your own rules</h1>
+  <p>A risk-first trading workstation for Windows. Write your rules once; VellFire checks every stock against them, sizes every trade from your stop, and keeps the limits you set. Claude is built in to set it up and coach you. Practice on paper first.</p>
+  <a class="dl" href="https://github.com/Vellfire-ai/vellfire.ai/releases/latest/download/VellFireAi_Setup.exe">⬇ Download for Windows</a>
+  <div class="alt"><a href="https://github.com/Vellfire-ai/vellfire.ai/releases/latest/download/VellFireAi_Portable.exe">Portable version</a> (no install) · Mac: coming soon</div>
+  <div class="note"><b>Windows may warn you the first time.</b> VellFire isn't code-signed yet, so SmartScreen can say "Windows protected your PC". Click <b>More info</b>, then <b>Run anyway</b>. After that, VellFire updates itself: each update is signed and checked before it installs, and your data is never touched.</div>
+ </section>
+
+ <div class="grid">
+  <div class="card"><h3>✓ Fits your rules?</h3><p>Every stock is checked against the rules you wrote: met, not met or unknown, with the numbers. No buy or sell signals, ever.</p></div>
+  <div class="card"><h3>🛡 Risk first</h3><p>A stop on every order, size from your risk, daily loss limit and trading hours enforced. You can't switch the safety off by accident.</p></div>
+  <div class="card"><h3>✨ Claude built in</h3><p>Ask Claude to build your screens, charts and panels, review your day, or check a stock against your rules. Uses your own Claude key.</p></div>
+  <div class="card"><h3>🔒 Your data stays on your PC</h3><p>No VellFire servers, no account, no tracking. Keys and trades stay on your computer.</p></div>
+  <div class="card"><h3>💷 Low cost</h3><p>Free during the beta. Bring your own broker (Interactive Brokers or IG demo) and data keys; free data options are built in.</p></div>
+ </div>
+
+ <div class="shots">
+  <img src="img/shot_01.png" alt="VellFire trade screen" loading="lazy"><img src="img/shot_03.png" alt="Screener" loading="lazy">
+  <img src="img/shot_06.png" alt="Claude in VellFire" loading="lazy"><img src="img/shot_10.png" alt="Situational Awareness" loading="lazy">
+ </div>
+
+ <footer>
+  <p><b>Risk warning.</b> VellFire.Ai is software for education and research. It is not financial advice and does not recommend any trade. Trading involves risk of loss, and you can lose more than you expect. Your decisions are your own. VellFire isn't affiliated with any broker.</p>
+  <p id="company"></p>
+  <p><a href="guide.html">Setup guide</a> · <a href="https://github.com/Vellfire-ai/vellfire.ai/releases">All releases</a> · Available in the UK.</p>
+ </footer>
+</div>
+<script>(() => {
+  const C = COMPANY, esc = t => String(t).replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
+  const name = (C.COMPANY_NAME || "").replace(/\s*\(trading as VellFire\.Ai\)\s*/i, "").trim();
+  if (!name) return;
+  const no = (C.COMPANY_NO || "").trim(), where = /^SC/i.test(no) ? "Registered in Scotland" : no ? "Registered in England & Wales" : "";
+  let line = `VellFire.Ai is a trading name of ${esc(name)}`;
+  if (no) line += `, company no. ${esc(no)}`;
+  if (C.REG_OFFICE) line += `, registered office ${esc(C.REG_OFFICE)}`;
+  line += "." + (where ? " " + where + "." : "");
+  if (C.CONTACT_EMAIL) line += ` Contact: <a href="mailto:${esc(C.CONTACT_EMAIL)}">${esc(C.CONTACT_EMAIL)}</a>`;
+  document.getElementById("company").innerHTML = line;
+})();</script>
+</body></html>
