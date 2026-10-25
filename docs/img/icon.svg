@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="VellFire.Ai">
+ <defs>
+  <linearGradient id="vfHex" x1="14" y1="14" x2="114" y2="114" gradientUnits="userSpaceOnUse">
+   <stop offset="0" stop-color="#7c3aed"/><stop offset="0.55" stop-color="#ff3d2e"/><stop offset="1" stop-color="#ff8a00"/></linearGradient>
+  <linearGradient id="vfLine" x1="38" y1="84" x2="90" y2="56" gradientUnits="userSpaceOnUse">
+   <stop offset="0" stop-color="#ff3d2e"/><stop offset="1" stop-color="#ff8a00"/></linearGradient>
+  <radialGradient id="vfGlow" cx="92" cy="46" r="26" gradientUnits="userSpaceOnUse">
+   <stop offset="0" stop-color="#ffd23f" stop-opacity="0.45"/><stop offset="1" stop-color="#ffd23f" stop-opacity="0"/></radialGradient>
+ </defs>
+ <polygon points="64.00,14.00 107.30,39.00 107.30,89.00 64.00,114.00 20.70,89.00 20.70,39.00" fill="#12151e" stroke="url(#vfHex)" stroke-width="7" stroke-linejoin="round"/>
+ <g transform="translate(-3 5)">
+ <circle cx="92" cy="46" r="26" fill="url(#vfGlow)"/>
+ <polyline points="38,84 48,76 57,80 69,64 77,69 88,56" fill="none" stroke="url(#vfLine)" stroke-width="6.5" stroke-linecap="round" stroke-linejoin="round"/>
+ <path d="M92 29 C96.5 35.5 100.5 40 100.5 46 C100.5 50.8 96.7 54.5 92 54.5 C87.3 54.5 83.5 50.8 83.5 46 C83.5 42.2 85.6 39.4 87.8 37.2 C88.1 40 89.2 41.8 90.6 42.5 C90.3 38 90.8 33.5 92 29 Z" fill="#ffd23f"/>
+ <path d="M92 41.5 C94.4 44.4 95.9 46.5 95.9 48.7 C95.9 51 94.2 52.6 92 52.6 C89.8 52.6 88.1 51 88.1 48.7 C88.1 46.8 89.4 45.1 92 41.5 Z" fill="#fff4c2"/></g>
+</svg>
