@@ -52,7 +52,17 @@ footer{border-top:1px solid var(--line);padding:22px 0 40px;color:var(--muted);f
   <div class="card"><h3>💷 Low cost</h3><p>14-day free trial, then a licence key (free during the beta: just email us). Bring your own broker (Interactive Brokers or IG demo) and data keys; free data options are built in.</p></div>
  </div>
 
- <div class="card" id="whatsnew" style="margin:18px 0"><h3>What's new in 0.4.8</h3><ul style="margin:6px 0 0;padding-left:20px;line-height:1.6">
+ <div class="card" id="whatsnew" style="margin:18px 0"><h3>What's new in 0.4.10</h3><ul style="margin:6px 0 0;padding-left:20px;line-height:1.6">
+  <li>Safer order sizing: orders size from your broker's live price and are refused if that price is missing or more than 10 seconds old.</li>
+  <li>Shift+X: point the mouse at your stop on the Trade chart and buy at market with that stop, sized from your risk per trade. A confirm box always shows first.</li>
+  <li>Limit entry lines (Shift+W or the toolbar button): drag a buy line and a stop line, see the size update, then click Confirm. Paper trading only.</li>
+  <li>List columns fit their text, and the 52-week "% From Low" column is clearly labelled.</li>
+ </ul><h3 style="margin-top:14px">0.4.9</h3><ul style="margin:6px 0 0;padding-left:20px;line-height:1.6">
+  <li>Volume fix (today's volume was shown 100x too big), a Risk tab with your limits and today's result in R, and risk locks that can't be loosened during market hours.</li>
+  <li>Chart lines on every timeframe, with a % label, and lines you can adjust after placing them; panes under the chart move with it.</li>
+  <li>Adjustable columns on every list (resize, reorder, show or hide, sort), a pinned toolbar that no longer jumps, and a second chart on the Trade page.</li>
+  <li>Esc always reaches your cancel key; offline voice for chart commands (never orders).</li>
+ </ul><h3 style="margin-top:14px">0.4.8</h3><ul style="margin:6px 0 0;padding-left:20px;line-height:1.6">
   <li>Backtest a stock: build your own rules (after costs, against random entries), with 312 ready-made templates to start from.</li>
   <li>Describe your test: type a backtest in plain words and Claude turns it into rules you check before anything runs.</li>
   <li>Claude costs under your control: pick the model for each job and set a monthly spend limit (Customise › Claude).</li>
