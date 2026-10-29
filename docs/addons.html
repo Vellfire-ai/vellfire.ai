@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Add-ons - VellFire.Ai</title>
+<meta name="description" content="Write your own VellFire.Ai tab in HTML and JavaScript. Sandboxed and read-only: quotes, bars, the Montage stock and your watchlist. Never orders or settings.">
+<link rel="icon" href="img/icon.svg"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+ <a class="brand" href="index.html"><img src="img/icon.svg" alt="">VellFire<span>.Ai</span></a>
+ <button class="burger" aria-label="Menu" aria-expanded="false">☰</button>
+ <nav class="nav"><a href="index.html">Home</a><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="guide.html">Guide</a><a href="addons.html">Add-ons</a><a href="about.html">About</a><button class="theme" type="button">☀ Light</button><a class="cta" href="download.html">Download</a></nav>
+</div></header>
+
+<section class="hero" style="padding-bottom:20px">
+ <div class="fire-bg"></div>
+ <div class="wrap">
+  <div class="kicker">Add-ons</div>
+  <h1>Your own tab.<br><span class="grad">Two files.</span></h1>
+  <p class="lead">An add-on is a small web page (HTML + JavaScript) that VellFire shows as an extra tab. It runs sealed off, reads the data you'd expect, and can't touch anything that matters.</p>
+ </div>
+</section>
+
+<main class="prose" style="padding-top:10px">
+ <div class="grid" style="margin-bottom:30px">
+  <div class="card hot"><h3><svg class="fl"></svg>Read-only</h3><p>It can read quotes, bars, the Montage stock and your watchlist. Nothing else.</p></div>
+  <div class="card hot"><h3><svg class="fl"></svg>Sandboxed</h3><p>No orders, no settings, no keys, no account, no journal. Calls that try are refused by VellFire and blocked by the browser.</p></div>
+  <div class="card hot"><h3><svg class="fl"></svg>Yours</h3><p>Add-ons live in your data folder, never in the program folder, so they stay yours through every update.</p></div>
+ </div>
+
+ <h2>Where they live</h2>
+ <p><b>Settings › Add-ons › Show add-ons folder</b> opens the folder (and creates it the first time). Each add-on is one sub-folder, named the same as its manifest's <code>name</code>:</p>
+<pre><code>%LOCALAPPDATA%\VellFireAi\plugins\
+    myaddon\
+        manifest.json
+        index.html
+        (any other files: .js .css .png .svg .json ...)</code></pre>
+ <p class="muted">Portable copy: the <code>plugins</code> folder sits inside "VellFire Data" next to the exe.</p>
+
+ <h2>manifest.json</h2>
+<pre><code>{
+  "name": "example",
+  "title": "% from open",
+  "icon": "%",
+  "entry": "index.html",
+  "version": "1",
+  "author": "VellFire example"
+}</code></pre>
+ <ul>
+  <li><b>name</b>: 1-32 characters, only <code>a-z 0-9 _ -</code>, and the same as the folder name.</li>
+  <li><b>title</b>: what the tab is called (up to 40 characters). <b>entry</b>: the page to open (default <code>index.html</code>).</li>
+  <li><b>version</b>, <b>author</b>, <b>icon</b> (1-4 characters, an emoji works): optional.</li>
+  <li><b>lock</b> (optional): <code>"lock": "A Name"</code> makes it load only when VellFire's licence name matches.</li>
+  <li><b>hosts</b> (optional): <code>"hosts": ["api.example.com"]</code> lists internet sites it wants to fetch from (https only, at most 5). Internet is <b>off</b> until you click <b>Approve</b> in Settings › Add-ons.</li>
+ </ul>
+
+ <h2>index.html: the bridge</h2>
+ <p>Put <code>&lt;script src="_vf.js"&gt;&lt;/script&gt;</code> in your page (VellFire supplies <code>_vf.js</code>). It gives you <code>vf</code>, the only way to get data:</p>
+<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta charset="utf-8"&gt;&lt;title&gt;% from open&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;script src="_vf.js"&gt;&lt;/script&gt;
+&lt;h2 id="sym"&gt;-&lt;/h2&gt;&lt;div id="out"&gt;waiting...&lt;/div&gt;
+&lt;script&gt;
+async function show(sym) {
+  document.getElementById("sym").textContent = sym || "-";
+  if (!sym) return;
+  const q = await vf.quote(sym);            // {sym, last, chg, delayed}
+  const b = await vf.bars(sym, "5m");       // {bars: [{time, open, high, low, close, volume}], source}
+  const open = b.bars.length ? b.bars[0].open : null;
+  document.getElementById("out").textContent =
+    `last ${q.last}  ·  ${open ? ((q.last / open - 1) * 100).toFixed(2) + "% from open" : ""}`;
+}
+vf.onSymbolChange(show);                    // follows the Montage on the Trade screen
+vf.montageSymbol().then(show);
+vf.watchlist().then(list =&gt; console.log("watchlist", list));
+&lt;/script&gt;
+&lt;/body&gt;&lt;/html&gt;</code></pre>
+ <p>Every call returns a Promise; a refused call rejects with an Error that says why. Timeframes: <code>1m 5m 15m 30m 1h D W</code>. Limits: 20 calls a second, <code>bars</code> 30 a minute. An add-on never moves the Montage.</p>
+
+ <h2>Try it</h2>
+ <ol>
+  <li>Make a folder in the add-ons folder, put a <code>manifest.json</code> and an <code>index.html</code> in it (the example above is enough).</li>
+  <li>Press <b>F5</b> in VellFire. The tab appears under <b>More ▾ › Add-ons</b> (and in Settings › Add-ons, with on / off).</li>
+  <li>Edit your files, press F5 on the add-on's tab to see the change.</li>
+  <li>If it won't load, Settings › Add-ons says why (for example "name must match its folder name").</li>
+ </ol>
+
+ <h2>The rules</h2>
+ <ul>
+  <li><b>Read-only.</b> No orders, no settings, no keys, no account, no journal.</li>
+  <li>No internet unless you approve its <code>hosts</code>. No pop-ups, alert boxes, forms, downloads, camera or microphone. No <code>localStorage</code>.</li>
+  <li>Files are served only from the add-on's own folder; <code>..</code> paths are refused.</li>
+  <li>Remove = Settings › Add-ons › Remove: the folder is moved to <code>plugins\_removed</code>, nothing is deleted.</li>
+  <li>VellFire is software for education and research. An add-on is not financial advice either.</li>
+ </ul>
+</main>
+
+<footer><div class="wrap">
+ <p class="brandline">VellFire<span style="color:var(--accent)">.Ai</span></p>
+ <p><b>Risk warning.</b> VellFire.Ai is software for education and research. It is not financial advice and does not recommend any trade. Trading involves risk of loss, and you can lose more than you expect. Your decisions are your own. VellFire isn't affiliated with any broker.</p>
+ <p>VellFire.Ai is a trading name of Brewster Home Services Ltd, company no. SC818021, registered office Carnessie House, Ancrum, Jedburgh, Scotland, TD8 6XA. Registered in Scotland.</p>
+ <div class="links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a><a href="guide.html">Setup guide</a><a href="addons.html">Add-ons</a><span>Available in the UK.</span></div>
+</div></footer>
+<script src="site.js"></script>
+</body></html>
