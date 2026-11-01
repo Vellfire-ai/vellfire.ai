@@ -1,101 +1,119 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Features - VellFire.Ai</title>
-<meta name="description" content="Charts, scanner, Trade screen with Montage and ladder, Firewall order-book heatmap, backtester, journal, Claude helper and add-ons. Every feature checks against your own rules.">
+<meta name="description" content="VellFire Basic has five working tabs plus Setup: Chartroom, Research, Trade, Risk and Journal. Every screenshot uses demo data with fictional stocks.">
 <link rel="icon" href="img/icon.svg"><link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="top"><div class="wrap">
  <a class="brand" href="index.html"><img src="img/icon.svg" alt="">VellFire<span>.Ai</span></a>
+ <a class="mcta" href="download.html">Download</a>
  <button class="burger" aria-label="Menu" aria-expanded="false">☰</button>
- <nav class="nav"><a href="index.html">Home</a><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="guide.html">Guide</a><a href="addons.html">Add-ons</a><a href="about.html">About</a><button class="theme" type="button">☀ Light</button><a class="cta" href="download.html">Download</a></nav>
+ <nav class="nav"><a href="index.html">Home</a><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="get-started.html">Get started</a><a href="help.html">Help</a><a href="about.html">About</a><button class="theme" type="button">☀ Light</button><a class="cta" href="download.html">Download for Windows</a></nav>
 </div></header>
-
-<section class="hero" style="padding-bottom:30px">
+<div class="ribbon"><div class="wrap"><span><b>Free beta.</b> VellFire Basic is free while in beta. Paper trading in the beta; live trading with your own IBKR account from launch. · <a href="pricing.html#beta">What beta means</a></span><button type="button" class="x" aria-label="Dismiss">×</button></div></div>
+<section class="hero" style="padding-bottom:22px">
  <div class="fire-bg"></div>
  <div class="wrap">
   <div class="kicker">Features</div>
-  <h1>Everything a desk needs.<br><span class="grad">Nothing that decides for you.</span></h1>
-  <p class="lead">Every panel below answers one question: does this fit the rules you wrote? Shown with simulated demo data for made-up stocks.</p>
+  <h1>Five tabs. <span class="grad">One desk.</span></h1>
+  <p class="lead">VellFire Basic has five working tabs plus Setup. Every screenshot uses demo data with fictional stocks.</p>
+  <p class="riskline "><span class="i" aria-hidden="true">i</span><span>VellFire is trading software, not financial advice. It never tells you what to buy or sell. Trading carries a risk of loss, and you can lose more than you expect. <a href="risk.html">Read the risk warning</a></span></p>
  </div>
 </section>
 
-<section style="padding-top:10px">
- <div class="wrap">
-  <div class="sec-head"><h2>Pick a tab</h2><p>The eight things you'll touch every day. Arrow keys work too.</p></div>
-  <div class="ftabs" data-ftabs></div>
- </div>
-</section>
+<nav class="subnav" aria-label="Sections"><div class="wrap"><a href="#chartroom">Chartroom</a><a href="#research">Research</a><a href="#trade">Trade</a><a href="#risk">Risk</a><a href="#journal">Journal</a><a href="#setup">Setup</a></div></nav>
+<section class="fsec" id="chartroom"><div class="wrap">
+ <h2>Chartroom</h2>
+ <p class="lead">Charts built your way, with scans and watchlists alongside.</p>
 
-<div class="wrap">
- <div class="sec-head" style="margin-top:20px"><h2>The full tour</h2><p>Every panel, one at a time.</p></div>
- <div class="feature">
-  <div class="text"><h2><svg class="fl"></svg>Charts</h2><p>Candles, Heikin-Ashi, area. Any timeframe, your indicators, drawing tools with hotkeys, and alert lines you drag straight on the chart. Grids of 1 to 6 charts, each one a tab you can float onto another screen.</p></div>
-  <img class="shot" src="img/feat_charts.png" alt="Chart room with two charts, watchlist and alert lines" loading="lazy">
+ <div class="cols">
+  <div>
+   <h3>Charts and panes</h3>
+   <ul><li>Add as many panes as you need under the price chart, and pick any indicator or formula for each one. Full pane picker <span class="soon-nov">Coming in November</span></li><li>Save layouts and switch between them in one click.</li><li>Oversold pane preset: a ready-made pane for spotting stretched moves, which you can adjust to your own settings.</li><li>Volume and relative strength against the market or a sector.</li></ul>
+   <h3>Plan on the chart</h3>
+   <ul><li>Draw trend lines and horizontal levels.</li><li>Mark your plan on the chart (entry, stop and targets) before you trade.</li></ul>
+  </div>
+  <div>
+   <h3>See the bigger picture</h3>
+   <ul><li>Top-down view: the same stock across several timeframes side by side.</li><li>Market view: the broad market and sectors at a glance.</li><li>Studies: a library of standard indicators with editable settings.</li><li>Grid layouts and pop-out windows for a second monitor.</li></ul>
+   <h3>Scans and watchlists</h3>
+   <ul><li>Live scans that update during the session.</li><li>Watchlists you can build, sort and link to the chart.</li></ul>
+   <h3>Command bar and voice</h3>
+   <ul><li>Type commands such as "add 20 EMA", "5 minute" or "ACME" in the command bar.</li><li>Or say them. Voice commands are free and work on your PC.</li></ul>
+  </div>
  </div>
- <div class="feature flip">
-  <div class="text"><h2><svg class="fl"></svg>Scanner</h2><p>Build screens in words or formulas, save them, run them on your universe. One click shows which results fit your rules. Columns you resize, reorder, sort and hide.</p></div>
-  <img class="shot" src="img/feat_screener.png" alt="Screener with saved screens, filters and a results table" loading="lazy">
- </div>
- <div class="feature">
-  <div class="text"><h2><svg class="fl"></svg>Trade screen</h2><p>Montage, Level 2 ladder and time and sales beside a 1-minute chart. Buy, short, peel and flatten on hotkeys, with a stop on every order and size worked out from your risk. Your risk box is always on.</p></div>
-  <img class="shot" src="img/feat_trade.png" alt="Trade screen: Montage, order buttons, chart, Level 2 ladder, time and sales" loading="lazy">
- </div>
- <div class="feature flip">
-  <div class="text"><h2><svg class="fl"></svg>Firewall: order-book heatmap. One platform.</h2><p>See the order book's walls right next to your chart and order ticket. No second app. Level 2 size over time, drawn behind the candles: thin book in blue, big walls glowing orange and white. One click on the Trade chart, using your broker's depth data.</p></div>
-  <div data-mock="heat"></div>
- </div>
- <div class="feature">
-  <div class="text"><h2><svg class="fl"></svg>Risk, locked</h2><p>Risk per trade, max loss per day, max trades, cool-down after losses, a revenge check and a one-idea-one-risk warning. Limits lock during market hours. The one thing you can always do: stop trading for today.</p></div>
-  <img class="shot" src="img/feat_risk.png" alt="Risk tab with limits and today's result in R" loading="lazy">
- </div>
- <div class="feature flip">
-  <div class="text"><h2><svg class="fl"></svg>Cool-down, enforced</h2><p>Two losses in a row and entries pause for the cool-down you set. The Montage counts it down; exits always work. A screenshot from a demo session that did exactly that.</p></div>
-  <img class="shot" src="img/feat_cooldown.png" alt="Trade screen showing the cool-down lock after two losing paper trades" loading="lazy">
- </div>
- <div class="feature flip">
-  <div class="text"><h2><svg class="fl"></svg>Backtester</h2><p>Describe a test in plain words or build the rules yourself. Daily to 1-minute bars, honest costs, compared with random entries and buy-and-hold. Every value is checked for look-ahead before anything runs.</p></div>
-  <img class="shot" src="img/feat_backtest.png" alt="Test my idea: describe a backtest in words, templates, entry rules" loading="lazy">
- </div>
- <div class="feature">
-  <div class="text"><h2><svg class="fl"></svg>Journal</h2><p>Every paper trade logged on its own: calendar, reports, insights and a playbook per setup. Tag the setup, grade the day, and let the nightly review keep the lessons.</p></div>
-  <img class="shot" src="img/feat_journal.png" alt="Journal dashboard: net R, win rate, drawdown, equity curve and VellFire score" loading="lazy">
- </div>
- <div class="feature flip">
-  <div class="text"><h2><svg class="fl"></svg>Situational Awareness</h2><p>Your market at a glance, built your way: charts, breadth, sector heat, news and your own market rules as a traffic light. Drag panels, size them, done.</p></div>
-  <img class="shot" src="img/feat_awareness.png" alt="Situational Awareness page with charts and market rules" loading="lazy">
- </div>
- <div class="feature">
-  <div class="text"><h2><svg class="fl"></svg>Claude helper</h2><p>Set me up asks a few questions and builds your workspace. Ask it to make a screen, add a chart, tune a page or review your day. It reads your rulebook on every answer and never places an order or loosens a limit.</p></div>
-  <img class="shot" src="img/feat_claude.png" alt="Claude side panel asking setup questions and building the workspace" loading="lazy">
- </div>
- <div class="feature flip">
-  <div class="text"><h2><svg class="fl"></svg>My Rules</h2><p>Your rulebook in plain English: setups, risk, hours, no-trade rules, exits. The coach, Claude's View and the nightly review judge every stock against it, not anyone else's.</p></div>
-  <img class="shot" src="img/feat_rules.png" alt="My Rules page with the rulebook editor" loading="lazy">
- </div>
- <div class="feature">
-  <div class="text"><h2><svg class="fl"></svg>Add-ons</h2><p>Write your own tab in HTML and JavaScript. It reads quotes, bars, the Montage stock and your watchlist through a sealed bridge, and can never place an order or change a setting. <a href="addons.html">How add-ons work →</a></p></div>
-  <div data-mock="addon"></div>
- </div>
- <div class="feature flip">
-  <div class="text"><h2><svg class="fl"></svg>Multi-screen workspaces</h2><p>Float any page onto another monitor, save layouts, and switch themes from black to white. Positions are remembered per page.</p></div>
-  <img class="shot" src="img/feat_multichart.png" alt="Multi-chart workspace floated onto another screen" loading="lazy">
- </div>
-</div>
+ <div class="shots"><figure class="slot" data-shot="chartroom-grid"><img src="img/basic_chartroom-grid.png" alt="Chartroom top-down grid with plan lines" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="placeholder needs-shot" data-shot="chartroom-grid" hidden><svg class="fl"></svg><b>Screenshot 4</b><span>Chartroom grid: ACME on 1-day, 1-hour and 5-minute charts (top-down view) with plan lines for entry, stop and target.</span></div><figcaption>Chartroom grid: ACME on 1-day, 1-hour and 5-minute charts (top-down view) with plan lines for entry, stop and target. <span class="fine">Demo data, fictional stocks.</span></figcaption></figure><figure class="slot" data-shot="chartroom-command"><img src="img/basic_chartroom-command.png" alt="Command bar adding an indicator" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="placeholder needs-shot" data-shot="chartroom-command" hidden><svg class="fl"></svg><b>Screenshot 5</b><span>Command bar with &quot;add 20 EMA&quot; typed and the indicator added to the chart.</span></div><figcaption>Command bar with "add 20 EMA" typed and the indicator added to the chart. <span class="fine">Demo data, fictional stocks.</span></figcaption></figure><figure class="slot" data-shot="chartroom-scan"><img src="img/basic_chartroom-scan.png" alt="Live scan results next to a watchlist" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="placeholder needs-shot" data-shot="chartroom-scan" hidden><svg class="fl"></svg><b>Screenshot 6</b><span>Live scan results next to a watchlist, linked to the chart.</span></div><figcaption>Live scan results next to a watchlist, linked to the chart. <span class="fine">Demo data, fictional stocks.</span></figcaption></figure></div>
+</div></section>
+<section class="fsec" id="research"><div class="wrap">
+ <h2>Research</h2>
+ <p class="lead">Find stocks and check the numbers without leaving the desk.</p>
 
+ <ul><li><b>Stock screener:</b> filter the market on price, volume, change, technical and fundamental fields. Save your screens and run them again any time.</li><li><b>Fundamentals:</b> earnings, financials, valuation and key figures on one page.</li><li><b>News:</b> headlines for your watchlist and the stock you're looking at.</li></ul>
+ <p class="fine" style="margin-top:12px">The screener's data fields depend on your data connection. <span class="confirm" title="Needs the owner's sign-off before publishing">[CONFIRM]</span> which fundamentals and news sources Basic uses.</p>
+ <div class="shots"><figure class="slot" data-shot="research-screener"><img src="img/basic_research-screener.png" alt="Screener with saved filters and results" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="placeholder needs-shot" data-shot="research-screener" hidden><svg class="fl"></svg><b>Screenshot 7</b><span>Screener with saved filters (price $5–$50, relative volume above 2) and the results table.</span></div><figcaption>Screener with saved filters (price $5–$50, relative volume above 2) and the results table. <span class="fine">Demo data, fictional stocks.</span></figcaption></figure><figure class="slot" data-shot="research-fundamentals"><img src="img/basic_research-fundamentals.png" alt="Fundamentals page for a fictional company" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="placeholder needs-shot" data-shot="research-fundamentals" hidden><svg class="fl"></svg><b>Screenshot 8</b><span>Fundamentals page for fictional company KESTREL: earnings history, key ratios and recent headlines.</span></div><figcaption>Fundamentals page for fictional company KESTREL: earnings history, key ratios and recent headlines. <span class="fine">Demo data, fictional stocks.</span></figcaption></figure></div>
+</div></section>
+<section class="fsec" id="trade"><div class="wrap">
+ <h2>Trade</h2>
+ <p class="lead">Order entry that starts from your stop.</p>
+
+ <div class="cols">
+  <div>
+   <h3>Montage order pane <span class="soon-nov">Coming in November</span></h3>
+   <ul><li>Buy, sell and short.</li><li>Market, limit and stop order types. <span class="soon-nov">Coming in November</span> <span class="confirm" title="Needs the owner's sign-off before publishing">[CONFIRM]</span> full list</li><li>Size by shares, or by risk: enter your stop and your $ risk, and VellFire works out the share count.</li><li>Attach a stop and one or more targets to every entry.</li><li>Stop types include a set price, trailing, ATR-based, and move-to-break-even after the first target.</li><li>A preview shows your $ risk and whether the order fits your rules before you send it.</li></ul>
+  </div>
+  <div>
+   <h3>Level 2 ladder</h3>
+   <ul><li>Market depth as a price ladder, from your broker's data. (Level 2 needs the matching subscription from your broker.)</li></ul>
+   <h3>Hotkeys</h3>
+   <ul><li>Keyboard shortcuts for entries, exits and cancels. Every hotkey order still carries a stop.</li></ul>
+   <p class="fine" style="margin-top:18px">In the beta, orders are paper trades: real prices, simulated fills. Live trading with your own IBKR account from launch.</p>
+  </div>
+ </div>
+ <div class="shots"><figure class="slot" data-shot="trade-montage"><img src="img/basic_trade-montage.png" alt="Montage with risk-based sizing and attached stops" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="placeholder needs-shot" data-shot="trade-montage" hidden><svg class="fl"></svg><b>Screenshot 9</b><span>Montage: short 150 BRIX by risk, ATR stop, two targets, break-even after target 1. Preview shows $120 risk.</span></div><figcaption>Montage: short 150 BRIX by risk, ATR stop, two targets, break-even after target 1. Preview shows $120 risk. <span class="soon-nov">Coming in November</span> <span class="fine">Demo data, fictional stocks.</span></figcaption></figure><figure class="slot" data-shot="trade-ladder"><img src="img/basic_trade-ladder.png" alt="Level 2 ladder beside a 1-minute chart" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="placeholder needs-shot" data-shot="trade-ladder" hidden><svg class="fl"></svg><b>Screenshot 10</b><span>Level 2 ladder next to a 1-minute chart of NOVA.</span></div><figcaption>Level 2 ladder next to a 1-minute chart of NOVA. <span class="fine">Demo data, fictional stocks.</span></figcaption></figure></div>
+</div></section>
+<section class="fsec" id="risk"><div class="wrap">
+ <h2>Risk</h2>
+ <p class="lead">Limits you set when you're calm, which hold when you're not.</p>
+
+ <ul><li><b>Risk per trade:</b> a set $ amount or a % of your account.</li><li><b>Daily loss limit:</b> when you reach it, new entries stop for the day. Closing positions always works.</li><li><b>Locked during market hours:</b> you can tighten limits at any time but not loosen them until the market closes.</li><li><b>Stop on every order:</b> no stop, no order.</li></ul>
+ <div class="shots"><figure class="slot" data-shot="risk-tab"><img src="img/basic_risk-tab.png" alt="Risk tab with limits locked" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="placeholder needs-shot" data-shot="risk-tab" hidden><svg class="fl"></svg><b>Screenshot 11</b><span>Risk tab: $100 per trade, $300 daily loss limit, locked until 4:00pm New York.</span></div><figcaption>Risk tab: $100 per trade, $300 daily loss limit, locked until 4:00pm New York. <span class="fine">Demo data, fictional stocks.</span></figcaption></figure></div>
+</div></section>
+<section class="fsec" id="journal"><div class="wrap">
+ <h2>Journal</h2>
+ <p class="lead">Every trade recorded, reviewed and ready for tax time.</p>
+
+ <ul><li><b>Trade log:</b> entry, exit, size, stop and result in $ and R, filled in automatically.</li><li><b>Notes and tags:</b> add your own notes and setup tags to each trade.</li><li><b>Stats:</b> win rate, average R, and results by setup, time of day and day of week.</li><li><b>Tax export:</b> <span class="soon-nov">Coming in November</span><ul><li>UK: capital gains with share matching (same-day, 30-day "bed and breakfast" rule, Section 104 pool) in GBP.</li><li>US: a Form 8949-style list of sales.</li><li>CSV export for your own spreadsheets.</li></ul></li></ul>
+ <p class="fine" style="margin-top:12px">The tax export is a record of your trades to help you or your accountant. It is not tax advice. Check the figures before you file.</p>
+ <div class="shots"><figure class="slot" data-shot="journal-log"><img src="img/basic_journal-log.png" alt="Journal trade log with tags and stats" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="placeholder needs-shot" data-shot="journal-log" hidden><svg class="fl"></svg><b>Screenshot 12</b><span>Journal trade log with tags, and the stats panel for a demo month.</span></div><figcaption>Journal trade log with tags, and the stats panel for a demo month. <span class="fine">Demo data, fictional stocks.</span></figcaption></figure><figure class="slot" data-shot="journal-tax"><img src="img/basic_journal-tax.png" alt="UK tax export preview" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="placeholder needs-shot" data-shot="journal-tax" hidden><svg class="fl"></svg><b>Screenshot 13</b><span>UK tax export preview: demo disposals matched same-day, 30-day and Section 104, in GBP.</span></div><figcaption>UK tax export preview: demo disposals matched same-day, 30-day and Section 104, in GBP. <span class="soon-nov">Coming in November</span> <span class="fine">Demo data, fictional stocks.</span></figcaption></figure></div>
+</div></section>
+<section class="fsec" id="setup"><div class="wrap">
+ <h2>Setup</h2>
+ <p class="lead">Connect, choose a theme, get help.</p>
+
+ <ul><li>Connect Interactive Brokers or Alpaca, or use demo data. Intraday charts and paper trading: Interactive Brokers (or demo data) in the beta; Alpaca free covers daily charts and research now, intraday coming in November.</li><li>Theme (light or dark), layouts and hotkeys.</li><li>Get help: builds a support file, shows you what's in it, and opens an email to us.</li><li>Updates install themselves outside US market hours, and your settings and journal are kept.</li></ul>
+</div></section>
+
+<section id="not-in-basic" style="scroll-margin-top:120px"><div class="wrap">
+ <aside class="soon" style="max-width:640px"><h3>What Basic doesn't include</h3><p class="muted">Basic is for stocks. It doesn't include options data or a backtester. More tools for active traders are planned for the Advanced package (coming Spring 2027).</p></aside>
+</div></section>
 <section class="cta-band">
  <div class="wrap">
-  <h2>See it with your own rules.</h2>
-  <p class="muted" style="max-width:560px;margin:0 auto 24px">14-day free trial. Demo data built in, so you can try every panel before connecting anything.</p>
+  <h2>Try it free during the beta</h2>
+  <p class="muted" style="max-width:560px;margin:0 auto 24px">Download VellFire, connect your data or start on demo data, and set your first risk limits in a few minutes.</p>
   <a class="btn fire big" href="download.html" data-dl="setup">⬇ Download for Windows</a>
+  <div class="sub muted" style="margin-top:12px;font-size:14px">Free beta · Paper trading in the beta · Windows 10/11</div>
  </div>
 </section>
-
 <footer><div class="wrap">
- <p class="brandline">VellFire<span style="color:var(--accent)">.Ai</span></p>
- <p><b>Risk warning.</b> VellFire.Ai is software for education and research. It is not financial advice and does not recommend any trade. Trading involves risk of loss, and you can lose more than you expect. Your decisions are your own. VellFire isn't affiliated with any broker.</p>
- <p>VellFire.Ai is a trading name of Brewster Home Services Ltd, company no. SC818021, registered office Carnessie House, Ancrum, Jedburgh, Scotland, TD8 6XA. Registered in Scotland.</p>
- <div class="links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a><a href="guide.html">Setup guide</a><a href="addons.html">Add-ons</a><span>Available in the UK.</span></div>
+ <div class="cols">
+  <div><p class="brandline">VellFire<span style="color:var(--accent)">.Ai</span></p><p>Desktop trading platform for Windows. Your broker, your data, your rules.</p></div>
+  <div><h4>Product</h4><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="get-started.html">Get started</a><a href="download.html">Download</a><a href="features.html#not-in-basic">What's not in Basic</a></div>
+  <div><h4>Help</h4><a href="help.html">Help &amp; FAQ</a><a href="get-started.html#ibkr">Connect Interactive Brokers</a><a href="get-started.html#alpaca">Connect Alpaca</a><p>Contact: <a data-mail href="mailto:brewsterhomeservices@gmail.com">brewsterhomeservices@gmail.com</a></p><p>Support: Monday to Friday, 9am to 5pm New York time.</p></div>
+  <div><h4>Legal</h4><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="risk.html">Risk warning</a><a href="notices.html">Open-source notices</a></div>
+ </div>
+ <p class="warn"><b>Risk warning.</b> VellFire is software for planning, practising and reviewing trades. It is not financial advice, and it does not recommend any security or trade. Trading stocks carries a high risk of loss, and you can lose more than you expect. Past results, including paper results, do not predict future results. Every decision is yours. VellFire is not affiliated with, endorsed by or sponsored by any broker or data provider.</p>
+ <p>VellFire.Ai is a trading name of Brewster Home Services Ltd, company no. SC818021, registered in Scotland. Registered office: Jedburgh, Scotland.<br>Interactive Brokers, Alpaca and Windows are trademarks of their respective owners.<br>© 2026 Brewster Home Services Ltd.</p>
 </div></footer>
-<script src="site.js"></script><script src="tabs.js"></script>
+<script src="site.js"></script>
 </body></html>
