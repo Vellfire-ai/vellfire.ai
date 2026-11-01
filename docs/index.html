@@ -1,91 +1,171 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>VellFire.Ai - Trade your own rules</title>
-<meta name="description" content="VellFire.Ai is a risk-first execution platform for Windows, built for fast, disciplined execution. Write your rules once; it checks every stock against them, sizes every trade from your stop and keeps your limits. Paper trading first. Your data stays on your PC.">
+<title>VellFire.Ai - One trading desk. Your rules built in.</title>
+<meta name="description" content="VellFire puts charts, a stock screener, order entry, risk limits and a trade journal in one Windows app. Connects to your own Interactive Brokers account or a free Alpaca data key. Free beta, paper trading, your data stays on your PC.">
 <link rel="icon" href="img/icon.svg"><link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="top"><div class="wrap">
  <a class="brand" href="index.html"><img src="img/icon.svg" alt="">VellFire<span>.Ai</span></a>
+ <a class="mcta" href="download.html">Download</a>
  <button class="burger" aria-label="Menu" aria-expanded="false">☰</button>
- <nav class="nav"><a href="index.html">Home</a><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="guide.html">Guide</a><a href="addons.html">Add-ons</a><a href="about.html">About</a><button class="theme" type="button">☀ Light</button><a class="cta" href="download.html">Download</a></nav>
+ <nav class="nav"><a href="index.html">Home</a><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="get-started.html">Get started</a><a href="help.html">Help</a><a href="about.html">About</a><button class="theme" type="button">☀ Light</button><a class="cta" href="download.html">Download for Windows</a></nav>
 </div></header>
+<div class="ribbon"><div class="wrap"><span><b>Free beta.</b> VellFire Basic is free while in beta. Paper trading in the beta; live trading with your own IBKR account from launch. · <a href="pricing.html#beta">What beta means</a></span><button type="button" class="x" aria-label="Dismiss">×</button></div></div>
 
-<section class="hero">
+<section class="hero split">
  <div class="fire-bg"></div>
- <div class="flames" aria-hidden="true"><div class="flame"></div><div class="flame"></div><div class="flame"></div><div class="flame"></div><div class="flame"></div><div class="flame"></div><div class="flame"></div></div>
- <div class="embers" aria-hidden="true"><i class="ember"></i><i class="ember"></i><i class="ember"></i><i class="ember"></i><i class="ember"></i><i class="ember"></i><i class="ember"></i><i class="ember"></i><i class="ember"></i><i class="ember"></i><i class="ember"></i><i class="ember"></i></div>
+ <div class="embers" aria-hidden="true"><i class="ember"></i><i class="ember"></i><i class="ember"></i><i class="ember"></i><i class="ember"></i><i class="ember"></i><i class="ember"></i><i class="ember"></i></div>
  <div class="wrap">
-  <div class="kicker">Risk-first execution platform for Windows</div>
-  <h1>Your rules.<br>Your desk. <span class="grad">On fire.</span></h1>
-  <p class="lead">Write your trading rules once. VellFire checks every stock against them, sizes every trade from your stop and holds the line on your daily limit. You decide. It keeps you honest.</p>
-  <a class="btn fire big" href="download.html" data-dl="setup">⬇ Download for Windows</a>
-  <div class="sub">14-day free trial · Windows 10/11 · <a href="download.html" data-dl="portable">Portable version</a> (no install)</div>
-  <div class="sub">Practise on paper first. No account. No VellFire servers. Your data stays on your PC.</div>
+  <div>
+   <div class="kicker">Desktop trading platform for Windows · Free beta</div>
+   <h1>One trading desk.<br><span class="grad">Your rules built in.</span></h1>
+   <p class="lead">VellFire puts charts, a stock screener, order entry, risk limits and a trade journal in one Windows app. It connects to your own Interactive Brokers account or a free Alpaca data key. Every order needs a stop, and your daily loss limit holds all session.</p>
+   <div class="btns"><a class="btn fire big" href="download.html" data-dl="setup">⬇ Download for Windows (free beta)</a><a class="btn ghost" href="features.html">See the features</a></div>
+   <div class="sub">Windows 10 or 11 · Paper trading in the beta · Your data stays on your PC · Not financial advice</div>
+   <div class="sub">Intraday charts and paper trading: Interactive Brokers (or demo data) in the beta; Alpaca free covers daily charts and research now, intraday coming in November.</div>
+   <p class="riskline "><span class="i" aria-hidden="true">i</span><span>VellFire is trading software, not financial advice. It never tells you what to buy or sell. Trading carries a risk of loss, and you can lose more than you expect. <a href="risk.html">Read the risk warning</a></span></p>
+  </div>
+  <figure class="slot" data-shot="hero"><div class="glow"><img src="img/basic_hero.png" alt="Chartroom with four panes and a watchlist" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="placeholder needs-shot" data-shot="hero" hidden><svg class="fl"></svg><b>Screenshot 1</b><span>Chartroom with four panes: price with 20 and 50 EMA, volume, relative strength and an oversold pane. Watchlist on the right.</span></div></div><figcaption>Chartroom with four panes: price with 20 and 50 EMA, volume, relative strength and an oversold pane. Watchlist on the right. <span class="fine">Demo data, fictional stocks.</span></figcaption></figure>
  </div>
 </section>
 
 <section>
  <div class="wrap">
-  <div class="sec-head"><h2>Built to keep you <span class="grad">disciplined</span></h2><p>Most tools show you more. VellFire shows you whether a stock fits the rules you wrote, and sizes the trade so one bad day stays a bad day.</p></div>
-  <div class="grid">
-   <div class="card hot"><h3><svg class="fl"></svg>Fits your rules?</h3><p>Every stock is checked against your own rulebook: met, not met or unknown, with the numbers behind each rule. "Fits your rules" or "Doesn't fit your rules", never a buy or sell signal.</p></div>
-   <div class="card hot"><h3><svg class="fl"></svg>Risk locked in</h3><p>A stop on every order. Size from your risk per trade. A daily loss limit and trading hours that lock during the session, so nothing loosens in the heat of the moment.</p></div>
-   <div class="card hot"><h3><svg class="fl"></svg>Claude in the cockpit</h3><p>Ask Claude to build your screens, charts and panels, review your day or check a stock against your rules. Uses your own Claude key with a monthly cap you set.</p></div>
-   <div class="card hot"><h3><svg class="fl"></svg>Yours, on your PC</h3><p>No VellFire servers, no account, no tracking. Your rules, journal, keys and paper trades live on your computer and nowhere else.</p></div>
+  <div class="sec-head"><h2>Built for <span class="grad">self-directed</span> traders</h2></div>
+  <div class="grid three">
+   <div class="card hot"><h3><svg class="fl"></svg>Day and swing traders</h3><p>You trade US stocks yourself and want one place to plan, enter and review each trade.</p></div>
+   <div class="card hot"><h3><svg class="fl"></svg>Interactive Brokers users</h3><p>You already have the account and the data. VellFire connects to it, so you don't need another data feed. No IBKR account? A free Alpaca key works too. Intraday charts and paper trading: Interactive Brokers (or demo data) in the beta; Alpaca free covers daily charts and research now, intraday coming in November.</p></div>
+   <div class="card hot"><h3><svg class="fl"></svg>Traders who want structure</h3><p>You have rules and want software that holds you to them on the days it matters most.</p></div>
   </div>
+  <p class="centre muted" style="margin:22px 0 0">Not for you if you want trade ideas, signals or someone to tell you what to buy. VellFire doesn't do that.</p>
  </div>
 </section>
 
-<section class="alt">
- <div class="wrap">
-  <div class="sec-head"><h2>One execution platform. Every weapon.</h2><p>Charts, Firewall order-book heatmap, scanner, Montage with a Level 2 ladder, backtester, journal and a coach that reads your rulebook. Pick a tab.</p></div>
-  <h3 class="inct">All for your trading business.</h3>
-  <div class="incg"><div class="incc"><h3>Execution Platform</h3><p>Montage, Level 2 ladder and hotkeys. Size from your stop, in one click.</p></div><div class="incc"><h3>Risk Management Tools</h3><p>Daily loss limit, risk per trade and locks that hold all session.</p></div><div class="incc"><h3>Fundamental Research</h3><p>Earnings, financials and news on one research page.</p></div><div class="incc"><h3>GEX Platform</h3><p>Dealer gamma by strike, call and put walls and the gamma flip, from your broker's option chains.</p></div><div class="incc"><h3>News</h3><p>What's in play and why, as it breaks.</p></div><div class="incc"><h3>Trading Journal</h3><p>Every trade logged and graded in R, with your discipline score.</p></div><div class="incc"><h3>Education</h3><p>Courses and drills that turn your rules into habits.</p></div><div class="incc"><h3>Backtesting System</h3><p>Test any idea in plain words, after costs, against random entries.</p></div><div class="incc"><h3>Market Stats Analysis</h3><p>Gap, range and day-type stats for the stocks you trade.</p></div></div>
-  <div class="ftabs" data-ftabs></div>
-  <p class="demo-note">Screenshots use simulated prices for made-up stocks; mocks are marked. <a href="features.html">See every feature →</a></p>
+<section class="alt band">
+ <div class="wrap two">
+  <div>
+   <h2>Fewer subscriptions, <span class="grad">more discipline</span></h2>
+   <p class="lede">Many traders pay for a charting service, a screener, a separate journal and a spreadsheet for tax, then place orders in the broker's own platform. Nothing connects, and nothing stops a bad day from turning into a worse one. VellFire brings those jobs into one desk and adds risk limits that you can't switch off mid-session.</p>
+  </div>
+  <div class="diag" aria-label="Four separate tools feeding into one VellFire desk">
+   <div class="stack"><div class="box">Charts</div><div class="box">Screener</div><div class="box">Journal</div><div class="box">Tax spreadsheet</div></div>
+   <div class="arrow">→</div>
+   <div class="one">VellFire</div>
+  </div>
  </div>
 </section>
 
 <section>
  <div class="wrap">
-  <div class="sec-head"><h2>How it works</h2><p>Four steps from a blank rulebook to a disciplined desk.</p></div>
-  <div class="steps">
-   <div class="step"><h3>Write your rules</h3><p>Setups, risk, hours, no-trade rules and exits, in plain English. Claude can help you draft them.</p></div>
-   <div class="step"><h3>VellFire checks every stock</h3><p>Screens, Claude's View and the market checks grade each stock against your rules, with the numbers shown.</p></div>
-   <div class="step"><h3>Size from your stop</h3><p>Point at your stop; VellFire sizes the order from your risk per trade. A confirm box always shows first.</p></div>
-   <div class="step"><h3>Practise on paper</h3><p>Paper trading with the same hotkeys, ladder and risk locks. Review the day, keep the lessons, repeat.</p></div>
+  <div class="sec-head"><h2>Everything in <span class="grad">five tabs</span></h2></div>
+  <div class="grid five">
+   <div class="card hot tab"><div class="ic"><svg class="fl"></svg></div><h3>Chartroom</h3><p>Charts with custom panes, drawing tools, levels, live scans and watchlists. Type or say "add 20 EMA" or "5 minute".</p><a class="more" href="features.html#chartroom">Chartroom →</a></div>
+   <div class="card hot tab"><div class="ic"><svg class="fl"></svg></div><h3>Research</h3><p>A full stock screener, fundamentals and news on one page.</p><a class="more" href="features.html#research">Research →</a></div>
+   <div class="card hot tab"><div class="ic"><svg class="fl"></svg></div><h3>Trade</h3><p>Montage order entry, Level 2 ladder and hotkeys. Size by shares or by risk from your stop, and see the $ risk before you send.</p><a class="more" href="features.html#trade">Trade →</a></div>
+   <div class="card hot tab"><div class="ic"><svg class="fl"></svg></div><h3>Risk</h3><p>Risk per trade, daily loss limit and a stop on every order. The limits lock during market hours.</p><a class="more" href="features.html#risk">Risk →</a></div>
+   <div class="card hot tab"><div class="ic"><svg class="fl"></svg></div><h3>Journal</h3><p>Every trade logged automatically, with stats, plus a tax export for UK capital gains and a US Form 8949-style report.</p><a class="more" href="features.html#journal">Journal →</a></div>
   </div>
  </div>
 </section>
 
-<section class="alt">
+<section class="alt band">
+ <div class="wrap two">
+  <figure class="slot" data-shot="risk-preview"><img src="img/basic_risk-preview.png" alt="Order preview with risk-based sizing" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="placeholder needs-shot" data-shot="risk-preview" hidden><svg class="fl"></svg><b>Screenshot 2</b><span>Order preview: 200 shares of NOVA, stop at 41.20, risk $150 (0.5% of the paper account). Fits your rules.</span></div><figcaption>Order preview: 200 shares of NOVA, stop at 41.20, risk $150 (0.5% of the paper account). Fits your rules. <span class="fine">Demo data, fictional stocks.</span></figcaption></figure>
+  <div>
+   <h2>Risk rules that hold <span class="grad">when it counts</span></h2>
+   <p class="lede">You set your risk per trade and your daily loss limit before the session. During market hours they lock, so you can't loosen them in the moment. Every order needs a stop. Position size comes from the distance to your stop, so a loss stays the size you planned.</p>
+   <ul class="ticks">
+    <li>Every order has a stop attached, or it doesn't go.</li>
+    <li>Size by risk: enter your stop and VellFire works out the shares.</li>
+    <li>Your $ risk is shown before you confirm.</li>
+    <li>When you reach the daily loss limit, new entries stop. You can still close positions.</li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<section class="band">
+ <div class="wrap two rev">
+  <figure class="slot" data-shot="journal-stats"><img src="img/basic_journal-stats.png" alt="Journal stats for a demo month" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><div class="placeholder needs-shot" data-shot="journal-stats" hidden><svg class="fl"></svg><b>Screenshot 3</b><span>Journal stats for a demo month: win rate, average R, and results by setup and time of day.</span></div><figcaption>Journal stats for a demo month: win rate, average R, and results by setup and time of day. <span class="fine">Demo data, fictional stocks.</span></figcaption></figure>
+  <div>
+   <h2>A journal that keeps itself, and a <span class="grad">tax record</span> at year end</h2>
+   <p class="lede">Every paper trade goes into your journal with its entry, exit, stop, size and result in R. The stats show what's working and what isn't. At year end, export a record for your tax return: UK capital gains with same-day, 30-day and Section 104 matching in GBP, or a US Form 8949-style list.</p>
+   <p class="fine">The tax export is a record to help you or your accountant. It is not tax advice.</p>
+  </div>
+ </div>
+</section>
+
+<section class="alt band">
  <div class="wrap">
-  <div class="price-card">
-   <span class="badge">Beta</span>
-   <h2 style="margin-top:10px">One plan. Everything in it.</h2>
-   <div class="price">$77.50<small>/month</small></div>
-   <p class="muted" style="margin:6px 0 0">about £60 · 14-day free trial, no card to start</p>
-   <ul><li>Charts, scanner, Trade screen with Montage and ladder</li><li>Backtester, journal, Situational Awareness, add-ons</li><li>Claude helper with your own key</li><li>Bring your own broker and data</li></ul>
-   <a class="btn fire" href="pricing.html">See pricing</a>
-  </div>
+  <div class="sec-head"><h2>One desk <span class="grad">instead of a stack</span></h2></div>
+  <table class="cmp">
+   <thead><tr><th></th><th>Typical stack</th><th>VellFire Basic</th></tr></thead>
+   <tbody>
+    <tr><td>Charts with custom indicator panes</td><td data-l="Typical stack">Separate charting subscription</td><td data-l="VellFire Basic">Included</td></tr>
+    <tr><td>Full stock screener and fundamentals</td><td data-l="Typical stack">Separate screener subscription</td><td data-l="VellFire Basic">Included</td></tr>
+    <tr><td>Order entry with Level 2 and hotkeys</td><td data-l="Typical stack">Broker platform</td><td data-l="VellFire Basic">Included (uses your broker's data)</td></tr>
+    <tr><td>Size by risk from your stop</td><td data-l="Typical stack">Calculator or spreadsheet</td><td data-l="VellFire Basic">Built into every order</td></tr>
+    <tr><td>Stop required on every order</td><td data-l="Typical stack">Up to you</td><td data-l="VellFire Basic">Enforced</td></tr>
+    <tr><td>Daily loss limit that locks</td><td data-l="Typical stack">Rarely available</td><td data-l="VellFire Basic">Enforced during market hours</td></tr>
+    <tr><td>Trade journal with stats</td><td data-l="Typical stack">Separate journal subscription or spreadsheet</td><td data-l="VellFire Basic">Automatic</td></tr>
+    <tr><td>UK CGT / US 8949-style export</td><td data-l="Typical stack">Spreadsheet or accountant time</td><td data-l="VellFire Basic">Included (a record, not tax advice)</td></tr>
+    <tr><td>Where your data lives</td><td data-l="Typical stack">Several vendors' servers</td><td data-l="VellFire Basic">Your PC</td></tr>
+    <tr><td>Market data</td><td data-l="Typical stack">Often bundled and marked up</td><td data-l="VellFire Basic">Your own IBKR or free Alpaca connection</td></tr>
+    <tr><td>Price</td><td data-l="Typical stack">Several monthly bills</td><td data-l="VellFire Basic">One plan, free during beta</td></tr>
+   </tbody>
+  </table>
+  <p class="fine centre">"Typical stack" describes a common set of separate tools. It doesn't refer to any particular product. Market data costs from your broker apply either way.</p>
  </div>
 </section>
 
+<section class="trust">
+ <div class="wrap">
+  <div class="sec-head"><h2>Your data stays <span class="grad">on your PC</span></h2></div>
+  <div class="grid three">
+   <div class="card hot"><h3><svg class="fl"></svg>Local by design</h3><p>Your journal, layouts, settings and keys are stored on your own PC. VellFire has no trading servers.</p></div>
+   <div class="card hot"><h3><svg class="fl"></svg>No login account</h3><p>You don't create a VellFire account. We hold only the email address your licence key is sent to. <span class="confirm" title="Needs the owner's sign-off before publishing">[CONFIRM]</span></p></div>
+   <div class="card hot"><h3><svg class="fl"></svg>Your own connection</h3><p>Prices come straight from your broker or Alpaca to your PC. We never see your orders, positions or keys.</p></div>
+  </div>
+  <p class="centre" style="margin:20px 0 0"><a href="about.html#privacy">What leaves your PC →</a></p>
+ </div>
+</section>
+
+<section class="alt band">
+ <div class="wrap">
+  <div class="sec-head"><h2>From download to <span class="grad">first chart</span></h2></div>
+  <div class="steps four">
+   <div class="step"><h3>Download and install</h3><p>Windows 10 or 11. If Windows shows a "protected your PC" message, click More info, then Run anyway. <a href="help.html#smartscreen">Why?</a></p></div>
+   <div class="step"><h3>Set your risk</h3><p>Choose your risk per trade and daily loss limit.</p></div>
+   <div class="step"><h3>Connect your data</h3><p>Connect your Interactive Brokers account or paste a free Alpaca key. You can also start on demo data. Intraday charts and paper trading: Interactive Brokers (or demo data) in the beta; Alpaca free covers daily charts and research now, intraday coming in November.</p></div>
+   <div class="step"><h3>Practise on paper</h3><p>Plan, enter and review trades with real prices and simulated fills.</p></div>
+  </div>
+  <p class="centre" style="margin:26px 0 0"><a class="btn" href="get-started.html">Full setup guide →</a></p>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <aside class="soon"><span class="badge">Coming Spring 2027</span><h3>Advanced package</h3><p class="muted">More tools for active traders, as an optional add-on to Basic. We'll share details closer to the time.</p><a data-mail="Advanced package" data-keep="1" href="mailto:brewsterhomeservices@gmail.com?subject=Advanced%20package">Get notified</a></aside>
+ </div>
+</section>
 <section class="cta-band">
  <div class="wrap">
-  <h2>Light it up.</h2>
-  <p class="muted" style="max-width:560px;margin:0 auto 24px">Download, pick demo data or connect your paper broker, and write your first rule in minutes.</p>
+  <h2>Try it free during the beta</h2>
+  <p class="muted" style="max-width:560px;margin:0 auto 24px">Download VellFire, connect your data or start on demo data, and set your first risk limits in a few minutes.</p>
   <a class="btn fire big" href="download.html" data-dl="setup">⬇ Download for Windows</a>
-  <div class="sub muted" style="margin-top:12px;font-size:14px">Windows 10/11 · <a href="download.html" style="color:var(--text)">Portable version and SmartScreen note</a></div>
+  <div class="sub muted" style="margin-top:12px;font-size:14px">Free beta · Paper trading in the beta · Windows 10/11</div>
  </div>
 </section>
-
 <footer><div class="wrap">
- <p class="brandline">VellFire<span style="color:var(--accent)">.Ai</span></p>
- <p><b>Risk warning.</b> VellFire.Ai is software for education and research. It is not financial advice and does not recommend any trade. Trading involves risk of loss, and you can lose more than you expect. Your decisions are your own. VellFire isn't affiliated with any broker.</p>
- <p>VellFire.Ai is a trading name of Brewster Home Services Ltd, company no. SC818021, registered office Carnessie House, Ancrum, Jedburgh, Scotland, TD8 6XA. Registered in Scotland.</p>
- <div class="links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a><a href="guide.html">Setup guide</a><a href="addons.html">Add-ons</a><span>Available in the UK.</span></div>
+ <div class="cols">
+  <div><p class="brandline">VellFire<span style="color:var(--accent)">.Ai</span></p><p>Desktop trading platform for Windows. Your broker, your data, your rules.</p></div>
+  <div><h4>Product</h4><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="get-started.html">Get started</a><a href="download.html">Download</a><a href="features.html#not-in-basic">What's not in Basic</a></div>
+  <div><h4>Help</h4><a href="help.html">Help &amp; FAQ</a><a href="get-started.html#ibkr">Connect Interactive Brokers</a><a href="get-started.html#alpaca">Connect Alpaca</a><p>Contact: <a data-mail href="mailto:brewsterhomeservices@gmail.com">brewsterhomeservices@gmail.com</a></p><p>Support: Monday to Friday, 9am to 5pm New York time.</p></div>
+  <div><h4>Legal</h4><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="risk.html">Risk warning</a><a href="notices.html">Open-source notices</a></div>
+ </div>
+ <p class="warn"><b>Risk warning.</b> VellFire is software for planning, practising and reviewing trades. It is not financial advice, and it does not recommend any security or trade. Trading stocks carries a high risk of loss, and you can lose more than you expect. Past results, including paper results, do not predict future results. Every decision is yours. VellFire is not affiliated with, endorsed by or sponsored by any broker or data provider.</p>
+ <p>VellFire.Ai is a trading name of Brewster Home Services Ltd, company no. SC818021, registered in Scotland. Registered office: Jedburgh, Scotland.<br>Interactive Brokers, Alpaca and Windows are trademarks of their respective owners.<br>© 2026 Brewster Home Services Ltd.</p>
 </div></footer>
-<script src="site.js"></script><script src="tabs.js"></script>
+<script src="site.js"></script>
 </body></html>
