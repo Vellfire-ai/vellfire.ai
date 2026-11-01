@@ -3,11 +3,29 @@
 const SIGNUP_ENDPOINT = "https://signup.vellfire.ai/api/signup";
 const DL_SETUP = "https://github.com/Vellfire-ai/vellfire.ai/releases/latest/download/VellFireAi_Setup.exe";
 const DL_PORTABLE = "https://github.com/Vellfire-ai/vellfire.ai/releases/latest/download/VellFireAi_Portable.exe";
+// The one contact address. Every <a data-mail> on the site is filled from here (change this line to switch to hello@vellfire.ai).
+const CONTACT_EMAIL = "brewsterhomeservices@gmail.com";
 
 window.vfStartDownload = url => { const a = document.createElement("a"); a.href = url; a.rel = "noopener"; document.body.appendChild(a); a.click(); a.remove(); };
 
 (() => {
   const $ = id => document.getElementById(id);
+  // ---- contact address, beta ribbon, help search, section sub-nav ----
+  document.querySelectorAll("a[data-mail]").forEach(a => { const s = a.dataset.mail; a.href = "mailto:" + CONTACT_EMAIL + (s ? "?subject=" + encodeURIComponent(s) : ""); if (!a.dataset.keep) a.textContent = CONTACT_EMAIL; });
+  const rib = document.querySelector(".ribbon");
+  if (rib) { let hid = false; try { hid = localStorage.getItem("vfRibbon") === "off"; } catch (e) {} if (hid) rib.remove(); else { const x = rib.querySelector(".x"); if (x) x.addEventListener("click", () => { rib.remove(); try { localStorage.setItem("vfRibbon", "off"); } catch (e) {} }); } }
+  const q = document.querySelector("#helpSearch");
+  if (q) q.addEventListener("input", () => {
+    const t = q.value.trim().toLowerCase();
+    document.querySelectorAll(".faq details").forEach(d => { const hit = !t || d.textContent.toLowerCase().includes(t); d.hidden = !hit; if (t && hit) d.open = true; });
+    document.querySelectorAll(".faq-group").forEach(g => { g.hidden = !!t && ![...g.querySelectorAll("details")].some(d => !d.hidden); });
+  });
+  const sub = document.querySelector(".subnav");
+  if (sub && "IntersectionObserver" in window) {
+    const links = [...sub.querySelectorAll("a")], secs = links.map(a => document.querySelector(a.getAttribute("href"))).filter(Boolean);
+    const io = new IntersectionObserver(es => { es.forEach(e => { if (e.isIntersecting) links.forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + e.target.id)); }); }, {rootMargin: "-40% 0px -55% 0px"});
+    secs.forEach(s => io.observe(s));
+  }
   // ---- shared flame icon (an SVG symbol + gradient, used by every .fl icon) ----
   const defs = document.createElement("div");
   defs.innerHTML = '<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="flameGrad" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#ff3d2e"/><stop offset=".55" stop-color="#ff8a00"/><stop offset="1" stop-color="#ffd23f"/></linearGradient>'
