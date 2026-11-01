@@ -3,8 +3,10 @@
 const SIGNUP_ENDPOINT = "https://signup.vellfire.ai/api/signup";
 const DL_SETUP = "https://github.com/Vellfire-ai/vellfire.ai/releases/latest/download/VellFireAi_Setup.exe";
 const DL_PORTABLE = "https://github.com/Vellfire-ai/vellfire.ai/releases/latest/download/VellFireAi_Portable.exe";
-// The one contact address. Every <a data-mail> on the site is filled from here (change this line to switch to hello@vellfire.ai).
-const CONTACT_EMAIL = "brewsterhomeservices@gmail.com";
+// true: no download buttons; every button points to the "new version coming" note on download.html. Set false when the new build is out.
+const DL_HOLD = true;
+// The one contact address. Every <a data-mail> on the site is filled from here.
+const CONTACT_EMAIL = "hello@vellfire.ai";
 
 window.vfStartDownload = url => { const a = document.createElement("a"); a.href = url; a.rel = "noopener"; document.body.appendChild(a); a.click(); a.remove(); };
 
@@ -47,6 +49,14 @@ window.vfStartDownload = url => { const a = document.createElement("a"); a.href 
     const next = cur === "dark" ? "light" : "dark"; applyTheme(next); try { localStorage.setItem("vfTheme", next); } catch (e) {}
   });
 
+  // ---- downloads on hold: every button goes to the note on the download page ----
+  if (DL_HOLD) {
+    document.querySelectorAll("a[data-dl]").forEach(a => { a.removeAttribute("data-dl"); a.href = "download.html#soon"; a.textContent = "New version coming this week"; });
+    document.querySelectorAll("[data-when-dl]").forEach(e => { e.hidden = true; });
+    document.querySelectorAll("[data-when-hold]").forEach(e => { e.hidden = false; });
+    return;
+  }
+  document.querySelectorAll("[data-when-hold]").forEach(e => { e.hidden = true; });
   // ---- download links: fill in the release URLs ----
   document.querySelectorAll("a[data-dl='setup']").forEach(a => { a.dataset.dl = DL_SETUP; });
   document.querySelectorAll("a[data-dl='portable']").forEach(a => { a.dataset.dl = DL_PORTABLE; });
