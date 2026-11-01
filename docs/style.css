@@ -226,6 +226,7 @@ footer .brandline{color:var(--text);font-weight:700;margin-bottom:6px}
 .slot{margin:0;position:relative}
 .slot img{display:block;width:100%;border-radius:12px;border:1px solid var(--line);background:#0b0d12}
 .slot[hidden],.slot img[hidden],.needs-shot[hidden]{display:none}
+.slot:has(img[hidden]),.needs-shot{display:none!important}
 .slot figcaption{font-size:13px;color:var(--muted);margin-top:10px;line-height:1.45}
 .slot .placeholder{aspect-ratio:16/10}
 .slot .placeholder b{font-size:17px}.slot .placeholder span{font-size:13px}
