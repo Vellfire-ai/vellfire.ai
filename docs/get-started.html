@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Get started - VellFire.Ai</title>
+<meta name="description" content="Install VellFire on Windows, set your risk limits, connect Interactive Brokers or a free Alpaca key, and take your first paper trade.">
+<link rel="icon" href="img/icon.svg"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+ <a class="brand" href="index.html"><img src="img/icon.svg" alt="">VellFire<span>.Ai</span></a>
+ <a class="mcta" href="download.html">Download</a>
+ <button class="burger" aria-label="Menu" aria-expanded="false">☰</button>
+ <nav class="nav"><a href="index.html">Home</a><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="get-started.html">Get started</a><a href="help.html">Help</a><a href="about.html">About</a><button class="theme" type="button">☀ Light</button><a class="cta" href="download.html">Download for Windows</a></nav>
+</div></header>
+<div class="ribbon"><div class="wrap"><span><b>Free beta.</b> VellFire Basic is free while in beta. Paper trading in the beta; live trading with your own IBKR account from launch. · <a href="pricing.html#beta">What beta means</a></span><button type="button" class="x" aria-label="Dismiss">×</button></div></div>
+<section class="hero" style="padding-bottom:22px">
+ <div class="fire-bg"></div>
+ <div class="wrap">
+  <div class="kicker">Get started</div>
+  <h1>Ten minutes to <span class="grad">your first chart.</span></h1>
+  <p class="lead">Most people are looking at their first chart within ten minutes. You need a Windows 10 or 11 PC and a data connection (or demo data to look around).</p>
+  <p class="riskline "><span class="i" aria-hidden="true">i</span><span>VellFire is trading software, not financial advice. It never tells you what to buy or sell. Trading carries a risk of loss, and you can lose more than you expect. <a href="risk.html">Read the risk warning</a></span></p>
+ </div>
+</section>
+
+<div class="gs">
+ <details class="toc" open>
+  <summary>Contents</summary>
+  <b>Contents</b>
+  <a href="#install">1. Download and install</a><a href="#smartscreen">&nbsp;&nbsp;&nbsp;Windows warning</a><a href="#first-run">2. First run</a><a href="#ibkr">3a. Connect Interactive Brokers</a><a href="#alpaca">3b. Connect Alpaca (free)</a><a href="#first-session">4. Your first session</a><a href="#trouble">If something isn't working</a>
+ </details>
+ <main>
+  <div class="gstep" id="install">
+   <h2><span class="n">1</span>Download and install</h2>
+   <ol>
+    <li>Click <b>Download for Windows</b> and save <code>VellFireAi_Setup.exe</code>.</li>
+    <li>Your browser may ask whether to keep the file. Choose <b>Keep</b>.</li>
+    <li>Run the installer. You don't need admin rights or any other software.</li>
+   </ol>
+   <p><a class="btn fire" href="download.html" data-dl="setup">⬇ Download for Windows</a></p>
+   <div class="box" id="smartscreen">
+    <h3>If Windows shows "Windows protected your PC"</h3>
+    <p>VellFire is new and not yet code-signed, so Windows doesn't recognise it yet. This message is normal for new apps.</p>
+    <ol><li>Click <b>More info</b>.</li><li>Check that the publisher line names the VellFire app, then click <b>Run anyway</b>.</li></ol>
+    <p style="margin:0">You'll only see this once. When code signing is in place, the message goes away.</p>
+   </div>
+   <p><b>Portable version (no install):</b> <code>VellFireAi_Portable.exe</code> runs from any folder. <span class="confirm" title="Needs the owner's sign-off before publishing">[CONFIRM]</span> still offered for Basic. <a href="#" data-dl="portable">Download the portable version</a></p>
+  </div>
+  <div class="gstep" id="first-run">
+   <h2><span class="n">2</span>First run</h2>
+   <ol>
+    <li>Read and accept the risk warning and terms.</li>
+    <li>Enter your licence key from the email (or start the trial). <span class="confirm" title="Needs the owner's sign-off before publishing">[CONFIRM]</span> flow</li>
+    <li>Set your risk per trade and daily loss limit. You can change these outside market hours.</li>
+    <li>Choose your data: Interactive Brokers, Alpaca, or demo data. Intraday charts and paper trading: Interactive Brokers (or demo data) in the beta; Alpaca free covers daily charts and research now, intraday coming in November.</li>
+   </ol>
+  </div>
+  <div class="gstep" id="ibkr">
+   <h2><span class="n">3a</span>Connect Interactive Brokers</h2>
+   <p><b>You need:</b> an Interactive Brokers account and Trader Workstation (TWS) or IB Gateway installed.</p>
+   <ol>
+    <li>Open TWS or IB Gateway and log in.</li>
+    <li>In TWS go to <code>File › Global Configuration › API › Settings</code>. Tick <b>Enable ActiveX and Socket Clients</b>. Leave <b>Read-Only API</b> ticked.</li>
+    <li>Note the port:
+     <table class="ports"><thead><tr><th>Program</th><th>Live</th><th>Paper</th></tr></thead><tbody><tr><td>TWS</td><td>7496</td><td>7497</td></tr><tr><td>IB Gateway</td><td>4001</td><td>4002</td></tr></tbody></table></li>
+    <li>In VellFire go to <code>Setup › Data › Interactive Brokers</code>, enter the port and click <b>Connect</b>. The status light in the top bar turns green.</li>
+    <li><b>Market data:</b> live streaming prices need market data subscriptions on your IBKR account (Client Portal › Settings › Market Data Subscriptions): the US Securities Snapshot and Futures Value Bundle plus the US Equity and Options Add-On Streaming Bundle. Level 2 needs NASDAQ TotalView-OpenView (and its EDS feed for third-party platforms). IBKR sets the prices; see IBKR's market data page for current fees.</li>
+   </ol>
+   <p class="fine"><b>Note:</b> VellFire keeps TWS or IB Gateway in read-only mode. In the beta, paper trades are filled by VellFire's simulator using real prices.</p>
+  </div>
+  <div class="gstep" id="alpaca">
+   <h2><span class="n">3b</span>Connect Alpaca, free</h2>
+   <p><b>You need:</b> a free Alpaca account.</p>
+   <ol>
+    <li>Sign up at alpaca.markets and open your dashboard.</li>
+    <li>Choose your <b>paper</b> account and click <b>Generate New Keys</b> under API Keys.</li>
+    <li>Copy the <b>Key ID</b> and <b>Secret Key</b>.</li>
+    <li>In VellFire go to <code>Setup › Data › Alpaca</code>, paste both and click <b>Connect</b>.</li>
+    <li><b>What the free plan gives you:</b> live prices from one exchange (IEX), full-market data 15 minutes delayed, and over 7 years of history. Alpaca's paid plan adds all exchanges in real time.</li>
+   </ol>
+   <p class="fine">Your keys are stored on your PC only. Intraday charts and paper trading: Interactive Brokers (or demo data) in the beta; Alpaca free covers daily charts and research now, intraday coming in November.</p>
+  </div>
+  <div class="gstep" id="first-session">
+   <h2><span class="n">4</span>Your first session</h2>
+   <ul>
+    <li>Open <b>Chartroom</b>, type a ticker in the command bar, and try "add 20 EMA" or "5 minute".</li>
+    <li>Build a watchlist and save a layout.</li>
+    <li>In <b>Trade</b>, set a stop and size an order by risk. Check the preview, then send the paper order.</li>
+    <li>After the close, open <b>Journal</b> to review the trade.</li>
+   </ul>
+  </div>
+  <div class="gstep" id="trouble">
+   <h2><span class="n">?</span>If something isn't working</h2>
+   <ul>
+    <li><b>Charts empty or not updating?</b> Check that TWS or IB Gateway is running and logged in, or that your Alpaca keys are entered. Look at the status light in the top bar.</li>
+    <li>Still stuck? Click <b>Get help</b> in VellFire (see <a href="help.html#get-help">Help</a>).</li>
+   </ul>
+  </div>
+ </main>
+</div>
+<footer><div class="wrap">
+ <div class="cols">
+  <div><p class="brandline">VellFire<span style="color:var(--accent)">.Ai</span></p><p>Desktop trading platform for Windows. Your broker, your data, your rules.</p></div>
+  <div><h4>Product</h4><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="get-started.html">Get started</a><a href="download.html">Download</a><a href="features.html#not-in-basic">What's not in Basic</a></div>
+  <div><h4>Help</h4><a href="help.html">Help &amp; FAQ</a><a href="get-started.html#ibkr">Connect Interactive Brokers</a><a href="get-started.html#alpaca">Connect Alpaca</a><p>Contact: <a data-mail href="mailto:brewsterhomeservices@gmail.com">brewsterhomeservices@gmail.com</a></p><p>Support: Monday to Friday, 9am to 5pm New York time.</p></div>
+  <div><h4>Legal</h4><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="risk.html">Risk warning</a><a href="notices.html">Open-source notices</a></div>
+ </div>
+ <p class="warn"><b>Risk warning.</b> VellFire is software for planning, practising and reviewing trades. It is not financial advice, and it does not recommend any security or trade. Trading stocks carries a high risk of loss, and you can lose more than you expect. Past results, including paper results, do not predict future results. Every decision is yours. VellFire is not affiliated with, endorsed by or sponsored by any broker or data provider.</p>
+ <p>VellFire.Ai is a trading name of Brewster Home Services Ltd, company no. SC818021, registered in Scotland. Registered office: Jedburgh, Scotland.<br>Interactive Brokers, Alpaca and Windows are trademarks of their respective owners.<br>© 2026 Brewster Home Services Ltd.</p>
+</div></footer>
+<script src="site.js"></script>
+</body></html>
