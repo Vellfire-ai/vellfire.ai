@@ -1,10 +1,11 @@
 // VellFire.Ai site: nav, theme toggle, flame icons and the sign-up modal that gates every download button.
 // Where sign-ups are sent. Change this one line after deploying the Worker (see DEPLOY.md).
 const SIGNUP_ENDPOINT = "https://signup.vellfire.ai/api/signup";
-const DL_SETUP = "https://github.com/Vellfire-ai/vellfire.ai/releases/latest/download/VellFireAi_Setup.exe";
-const DL_PORTABLE = "https://github.com/Vellfire-ai/vellfire.ai/releases/latest/download/VellFireAi_Portable.exe";
+const DL_SETUP = "https://github.com/Vellfire-ai/vellfire.ai/releases/latest/download/VellFire_Basic_Setup.exe";
+const DL_PORTABLE = "https://github.com/Vellfire-ai/vellfire.ai/releases/latest/download/VellFire_Basic_Portable.exe";
+const DL_USB = "https://github.com/Vellfire-ai/vellfire.ai/releases/latest/download/VellFire_Basic_USB.zip";
 // true: no download buttons; every button points to the "new version coming" note on download.html. Set false when the new build is out.
-const DL_HOLD = true;
+const DL_HOLD = false;
 // The one contact address. Every <a data-mail> on the site is filled from here.
 const CONTACT_EMAIL = "hello@vellfire.ai";
 
@@ -60,6 +61,7 @@ window.vfStartDownload = url => { const a = document.createElement("a"); a.href 
   // ---- download links: fill in the release URLs ----
   document.querySelectorAll("a[data-dl='setup']").forEach(a => { a.dataset.dl = DL_SETUP; });
   document.querySelectorAll("a[data-dl='portable']").forEach(a => { a.dataset.dl = DL_PORTABLE; });
+  document.querySelectorAll("a[data-dl='usb']").forEach(a => { a.dataset.dl = DL_USB; });
 
   // ---- the sign-up modal (one copy, injected on every page that has a download button) ----
   if (!document.querySelector("a[data-dl]")) return;
