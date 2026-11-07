@@ -4,7 +4,7 @@ const SIGNUP_ENDPOINT = "https://signup.vellfire.ai/api/signup";
 // 3 Nov: pinned to the Basic tag, not /latest/, so a later release can't change what these buttons download
 const DL_SETUP = "https://github.com/Vellfire-ai/vellfire.ai/releases/download/basic-v0.5.0/VellFire_Basic_Setup.exe";
 const DL_PORTABLE = "https://github.com/Vellfire-ai/vellfire.ai/releases/download/basic-v0.5.0/VellFire_Basic_Portable.exe";
-const DL_USB = "https://github.com/Vellfire-ai/vellfire.ai/releases/download/basic-v0.5.0/VellFire_Basic_USB.zip";
+const DL_USB = "https://github.com/Vellfire-ai/vellfire.ai/releases/download/basic-v0.5.0.1/VellFire_Basic_USB.zip";
 // true: no download buttons; every button points to the "new version coming" note on download.html. Set false when the new build is out.
 const DL_HOLD = false;
 // The one contact address. Every <a data-mail> on the site is filled from here.
