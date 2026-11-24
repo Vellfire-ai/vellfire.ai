@@ -1,12 +1,12 @@
-// VellFire.Ai site: nav, theme toggle, flame icons and the sign-up modal that gates every download button.
+// VellFire.Ai site: nav, theme toggle, flame icons. (The download sign-up modal below is switched off by DL_HOLD.)
 // Where sign-ups are sent. Change this one line after deploying the Worker (see DEPLOY.md).
 const SIGNUP_ENDPOINT = "https://signup.vellfire.ai/api/signup";
 // 3 Nov: pinned to the Basic tag, not /latest/, so a later release can't change what these buttons download
-const DL_SETUP = "https://github.com/Vellfire-ai/vellfire.ai/releases/download/basic-v0.5.0/VellFire_Basic_Setup.exe";
-const DL_PORTABLE = "https://github.com/Vellfire-ai/vellfire.ai/releases/download/basic-v0.5.0/VellFire_Basic_Portable.exe";
-const DL_USB = "https://github.com/Vellfire-ai/vellfire.ai/releases/download/basic-v0.5.0.1/VellFire_Basic_USB.zip";
-// true: no download buttons; every button points to the "new version coming" note on download.html. Set false when the new build is out.
-const DL_HOLD = false;
+const DL_SETUP = "";
+const DL_PORTABLE = "";
+const DL_USB = "";
+// 24 Nov: no public downloads. Any leftover a[data-dl] becomes the "More details" email link and the sign-up modal never opens.
+const DL_HOLD = true;
 // The one contact address. Every <a data-mail> on the site is filled from here.
 const CONTACT_EMAIL = "hello@vellfire.ai";
 
@@ -51,9 +51,9 @@ window.vfStartDownload = url => { const a = document.createElement("a"); a.href 
     const next = cur === "dark" ? "light" : "dark"; applyTheme(next); try { localStorage.setItem("vfTheme", next); } catch (e) {}
   });
 
-  // ---- downloads on hold: every button goes to the note on the download page ----
+  // ---- no downloads: any leftover download button becomes the "More details" email link ----
   if (DL_HOLD) {
-    document.querySelectorAll("a[data-dl]").forEach(a => { a.removeAttribute("data-dl"); a.href = "download.html#soon"; a.textContent = "New version coming this week"; });
+    document.querySelectorAll("a[data-dl]").forEach(a => { a.removeAttribute("data-dl"); a.href = "mailto:" + CONTACT_EMAIL + "?subject=" + encodeURIComponent("More details"); a.textContent = "Get in touch"; });
     document.querySelectorAll("[data-when-dl]").forEach(e => { e.hidden = true; });
     document.querySelectorAll("[data-when-hold]").forEach(e => { e.hidden = false; });
     return;
