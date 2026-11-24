@@ -5,7 +5,12 @@
   --fire:linear-gradient(135deg,#ff3d2e 0%,#ff8a00 55%,#ffd23f 100%);
   --glow:0 0 0 1px rgba(255,138,0,.35),0 8px 30px rgba(255,110,0,.35);
   --radius:14px;--shadow:0 10px 40px rgba(0,0,0,.45);
+  color-scheme:dark;
 }
+/* light theme: page links and small orange text need a darker orange to stay readable on the light background */
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){color-scheme:light}:root:not([data-theme="dark"]) :is(p,li) a:not(.btn){color:#b45309}}
+:root[data-theme="light"]{color-scheme:light}
+:root[data-theme="light"] :is(p,li) a:not(.btn){color:#b45309}
 @media (prefers-color-scheme: light){
   :root:not([data-theme="dark"]){--bg:#fbf8f4;--bg2:#f4efe8;--panel:#fff;--panel2:#fff7ef;--line:#e4dcd2;--text:#14181f;--muted:#5b6470;
     --shadow:0 10px 30px rgba(60,30,0,.10);--glow:0 0 0 1px rgba(255,138,0,.35),0 8px 26px rgba(255,120,0,.28)}
