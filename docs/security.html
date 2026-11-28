@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="darkreader-lock"><meta name="color-scheme" content="dark light">
+<title>How VellFire keeps you safe - VellFire.Ai</title>
+<meta name="description" content="VellFire runs on your own PC. Websites can't drive it, live orders need a real click, and your risk limits are checked against VellFire's digital signature.">
+<link rel="icon" href="img/icon.svg"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+ <a class="brand" href="index.html"><img src="img/icon.svg" alt="">VellFire<span>.Ai</span></a>
+ <a class="mcta" data-mail="More details" data-keep="1" href="mailto:hello@vellfire.ai?subject=More%20details">Get in touch</a>
+ <button class="burger" aria-label="Menu" aria-expanded="false">☰</button>
+ <nav class="nav"><a href="index.html">Home</a><a href="index.html#how">How it works</a><a href="features.html">Features</a><a href="help.html">Help</a><a href="about.html">About</a><button class="theme" type="button">☀ Light</button><a class="cta" data-mail="More details" data-keep="1" href="mailto:hello@vellfire.ai?subject=More%20details">Get in touch</a></nav>
+</div></header>
+
+<main class="prose">
+ <h1>How VellFire keeps you safe</h1>
+ <div class="callout">We never see your broker login. With Interactive Brokers you log in to IBKR's own app, with IBKR's 2-step check, and VellFire only talks to it on your PC.</div>
+
+ <h2>VellFire runs on your computer, not on ours</h2>
+ <p>VellFire's screen is served only to your own PC (address 127.0.0.1). It does not listen on your network, so other devices at home or on public wifi cannot reach it.</p>
+
+ <h2>A website cannot drive VellFire</h2>
+ <p>Other websites open in your browser cannot place, arm or cancel orders, or change your settings. VellFire refuses any request that does not come from its own pages, and refuses requests that use a different web address for your computer (a trick known as DNS rebinding). We tested forms, background requests and live connections from a foreign site: all were refused.</p>
+
+ <h2>Live orders need the VellFire window</h2>
+ <p>Going live, confirming a live order and flattening everything all need a one-time approval that is created only in the VellFire desktop window. Each approval works once, for that one action, and expires after 20 seconds. A website, or a script talking to VellFire's local server, cannot create one, and without it no order is sent.</p>
+ <p>Automatic strategies and alerts cannot place live orders. Automatic entries are refused whenever you are live and trade on paper only. Once you are in a live trade, VellFire still looks after its protective stop for you, for example resizing the stop after a partial fill.</p>
+
+ <h2>Your risk limits are protected</h2>
+ <p>The files that hold your risk limits, the stop on every order and the daily loss lock are checked against a list signed by VellFire every time VellFire starts and every time live trading is armed. If one is changed, live trading switches off on that computer. Paper trading and everything else keep working. You can customise anything else freely.</p>
+
+ <h2>Updates</h2>
+ <p>VellFire never pushes code to your PC. You choose when to update. After an update, the files that control orders and risk are checked against VellFire's digital signature, and live trading stays off if any of them don't match.</p>
+
+ <h2>VellFire's servers cannot place orders</h2>
+ <p>Our shop and licence service only answers requests that your copy sends: buying, licence check-in and renewal. It has no way to connect to your computer or your broker. Your broker login and your keys stay on your PC.</p>
+
+ <h2>Your keys</h2>
+ <p>Broker and data keys are stored on your own PC, in your VellFire folder. They are never sent to us.</p>
+
+ <h2>What we do not claim</h2>
+ <ul>
+  <li>Another program already running under your Windows login could still reach your broker's local connection. Keep your PC free of untrusted software and keep Windows Defender Firewall on.</li>
+  <li>Windows and your broker's own security are your responsibility.</li>
+ </ul>
+ <p>Questions about security? Email <a data-mail href="mailto:hello@vellfire.ai">hello@vellfire.ai</a>. See also our <a href="privacy.html">privacy notice</a> and <a href="terms.html">terms</a>.</p>
+</main>
+<footer><div class="wrap">
+ <div class="cols">
+  <div><p class="brandline">VellFire<span style="color:var(--accent)">.Ai</span></p><p>Bespoke trading software for Windows. Your broker, your data, your rules.</p></div>
+  <div><h4>Product</h4><a href="index.html#how">How it works</a><a href="features.html">Features</a><a href="get-started.html">How setup works</a></div>
+  <div><h4>Help</h4><a href="help.html">Help &amp; FAQ</a><a href="get-started.html#ibkr">Connect Interactive Brokers</a><a href="get-started.html#alpaca">Connect Alpaca</a><p>Contact: <a data-mail href="mailto:hello@vellfire.ai">hello@vellfire.ai</a></p><p>Support: Monday to Friday, 9am to 5pm New York time.</p></div>
+  <div><h4>Legal</h4><a href="security.html">Security</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="risk.html">Risk warning</a><a href="notices.html">Open-source notices</a></div>
+ </div>
+ <p class="warn"><b>Risk warning.</b> VellFire is software for planning, practising and reviewing trades. It is not financial advice, and it does not recommend any security or trade. Trading stocks carries a high risk of loss, and you can lose more than you expect. Past results, including paper results, do not predict future results. Every decision is yours. VellFire is not affiliated with, endorsed by or sponsored by any broker, data provider or AI provider.</p>
+ <p>VellFire.Ai is a trading name of Brewster Home Services Ltd, company no. SC818021, registered in Scotland. Registered office: Jedburgh, Scotland.<br>Interactive Brokers, Alpaca, Claude, Anthropic and Windows are trademarks of their respective owners.<br>© 2026 Brewster Home Services Ltd.</p>
+</div></footer>
+<script src="site.js"></script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "0a766d28a99a4101ae977ba47c6652b1"}'></script><!-- End Cloudflare Web Analytics -->
+</body></html>
